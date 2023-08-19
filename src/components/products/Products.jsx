@@ -43,7 +43,7 @@ const Products = () => {
                 <div className='detail_Container'>
                     <div className='detail_Content'>
                         <button className='close' onClick={() => setClose(false)}>
-                            <AiFillCloseCircle />
+                            <AiFillCloseCircle className='svg-close'/>
                         </button>
                         {detail.map((x) => (
                             <div className='row detail_info' key={x.id}> 

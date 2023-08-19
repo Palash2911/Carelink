@@ -86,8 +86,12 @@ h3{
     background: none;
     cursor: pointer;
     position: absolute;
-    top: 0;
-    left: 0;
+    top: 7px;
+    right: 7px;
+  }
+  .svg-close{
+    width: 27px;
+    height: 27px;
   }
 
   .team_Container .team_Content .team_info{

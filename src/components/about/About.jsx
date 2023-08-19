@@ -15,7 +15,7 @@ const About = () => {
                 <div className="col-lg-6 col-md-12">
                     <div className="about-details">
                         <h1>About us</h1>
-                        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Architecto quo velit earum natus error eos, accusantium iste molestias illo totam facere expedita aspernatur voluptates tempora? Natus, est inventore. Quos, aut possimus? Quia animi deserunt ab.</p>
+                        <p>Carelink Pharma, led by dynamic young entrepreneurs, brings fresh energy to the pharmaceutical sector. With deep industry knowledge, technical prowess, and a commitment to quality, they aim to elevate healthcare standards. Collaborating with top-tier manufacturers known for their expertise and facilities, Carelink Pharma ensures precision and adherence to global quality standards. Driven by innovation, Carelink Pharma strives to make a positive impact by delivering forward-thinking pharmaceutical solutions that meet patient and healthcare professional expectations worldwide.</p>
                     </div>
                 </div>
                 <div className="col-lg-6 col-md-12">

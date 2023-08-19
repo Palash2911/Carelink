@@ -42,7 +42,7 @@ const Vision = () => {
     close ?
         <div className='team_Container'>
             <div className='team_Content'>
-                <button className='close' onClick={() => setClose(false)}><AiFillCloseCircle /></button>
+                <button className='close' onClick={() => setClose(false)}><AiFillCloseCircle className='svg-close' /></button>
                 {
                     team.map((x) => (
                         <div className='row team_info' key={x.id}>
@@ -67,7 +67,6 @@ const Vision = () => {
                         <h3>{element.Title}</h3>
                     </div>
                     ))}
-
                 </div>
             </section>
         </>

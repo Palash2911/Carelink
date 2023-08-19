@@ -9,9 +9,15 @@
     object-fit: cover;
   }
 
-.close{
-  color: white;
-}
+  
+  .close{
+    color: white;
+  }
+
+  .svg-close{
+    width: 27px;
+    height: 27px;
+  }
 
   .card p{
     color: #000;
@@ -76,8 +82,8 @@
     background: none;
     cursor: pointer;
     position: absolute;
-    top: 0;
-    left: 0;
+    top: 7px;
+    right: 7px;
   }
 
   .detail_Container .detail_Content .detail_info{

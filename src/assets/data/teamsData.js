@@ -44,17 +44,18 @@ const teamsData = [
     },
     {
         id: 4,
-        Title: 'Company usp',
+        Title: 'Why Dermatology',
         img: pdtImage4,
         team_info:
             <div>
-                <p>Carelink Pharma stands out with its unique selling points. Carelink Pharma is founded by a group of young entrepreneurs who bring fresh perspectives and energy to the pharmaceutical industry. These pioneering founders are driven to make a positive impact. Along with their passion, ambition, and in-depth knowledge of market dynamics, they exhibit youthful enthusiasm.
+                <p>Dermatology is a field that focuses on the study, diagnosis, and treatment of skin-related conditions and concerns. Given that the skin is both the largest sensory organ in the human body and the most visible, it is of utmost importance. As the outermost layer, the skin acts as a protective barrier, shielding our internal organs from external elements. Individuals depend on their skin's health and appearance since their skin's condition frequently indicates how they are feeling overall.
                 <br />
                 <br />
-                The founders of the company are renowned for their technical proficiency, in-depth knowledge of the industry, and commitment to the highest standards of quality. With keen business sense, they are dedicated to developing the pharmaceutical industry and improving healthcare results. Carelink Pharma strives to make a positive difference by delivering novel solutions with a forward-thinking and committed mindset.
+                Beauty and self-care are becoming increasingly important in today's society.  Many individuals are conscious of their appearance and seek dermatological solutions to address various skin concerns. Whether it's acne, eczema, psoriasis, or aging-related issues, dermatology plays a vital role in diagnosing, treating, and managing these conditions. By providing effective treatments and interventions, dermatologists can significantly improve the quality of life for individuals who are impacted by these skin conditions.
                 <br />
                 <br />
-                Carelink Pharma collaborates with world-class manufacturers to produce its pharmaceutical products. These manufacturers are renowned for their expertise, advanced facilities, and adherence to strict quality standards. By partnering with these manufacturers, Carelink Pharma ensures that its products are manufactured with precision, reliability, and adherence to global quality regulations. Through this collaboration, Carelink Pharma is able to address the needs and expectations of patients and healthcare professionals around the world by delivering pharmaceuticals of excellent quality and efficacy.
+                Dermatology is a field that encompasses both medical and aesthetic aspects. On one hand, dermatologists diagnose and treat medical conditions such as skin cancer, infections, and inflammatory disorders. On the other hand, they offer a range of cosmetic treatments that help individuals achieve their desired appearance and boost their self-confidence. This combination of medical and aesthetic expertise makes dermatology a diverse and multidimensional field.
+                Furthermore, dermatology takes a holistic approach to skin health. It considers factors such as lifestyle, nutrition, and environmental influences in addition to medical interventions. Dermatologists emphasize the significance of keeping healthy skin through appropriate care, prevention, and early diagnosis of potential disorders in order to enhance overall wellbeing. This comprehensive approach ensures that individuals receive the necessary guidance and support to achieve and maintain optimal skin health.
                 </p>
                 
             </div>
