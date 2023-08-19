@@ -28,15 +28,16 @@ const productData = [
         Des: 'Kerafly shampoo, enriched with Anagain and caffeine and being sulfate-free, offers several benefits for your hair',
         detail_info: <div>
             <p>Kerafly shampoo, enriched with Anagain and caffeine, and being sulfate-free, offers several benefits for your hair. Anagain is derived from organic pea sprouts and is believed to promote hair growth by extending the hair growth phase and revitalizing hair follicles. Caffeine, known for its stimulating properties, can also contribute to hair growth and help improve hair texture.<br /><br />
-                The sulfate-free formula is gentle on the scalp and hair, preventing excessive drying and maintaining the natural oils that keep your hair healthy and shiny. This can be especially beneficial for individuals with sensitive or dry scalps, as sulfate-free shampoos tend to be less harsh and reduce the risk of irritation.</p>
-            <br />
+                The sulfate-free formula is gentle on the scalp and hair, preventing excessive drying and maintaining the natural oils that keep your hair healthy and shiny. This can be especially beneficial for individuals with sensitive or dry scalps, as sulfate-free shampoos tend to be less harsh and reduce the risk of irritation.
+                <br />
             <br />
             • Kerafly shampoo- Repairs, Protects, Nourishes  <br />
             • GMO free <br />
             • Conditions scalp and hair <br />
             • No artificial colors<br />
             • SLS/SLES Free gentle cleansing<br />
-            • Paraben free  <br />
+            • Paraben free  <br /></p>
+            
         </div>,
     },
     {
@@ -47,13 +48,14 @@ const productData = [
         detail_info:
             <div>
                 <p>Rediban sunscreen offers a unique hybrid formula that combines non-greasy gel base with a non-comedogenic and oil-free formulation. Its SPF 30 provides effective sun protection for all skin types. Using Rediban sunscreen can help prevent sunburn, premature aging, and potential damage caused by both UV and blue light exposure.
-                </p>
                 <br />
                 <br />
                 • For all skin types <br />
                 • Broad spectrum <br />
                 • Blue light protection <br />
                 • Non comedogenic<br />
+                </p>
+                
             </div>
         ,
     },
@@ -65,13 +67,14 @@ const productData = [
         detail_info:
             <div>
                 <p>Renew-Me S Face Wash is a skin-rejuvenating face wash used to manage acne or as an adjuvant in acne management. It contains aloe vera, glycolic acid and salicylic acid as active ingredients which show healing, moisturizing, anti-inflammatory and antiseptic effects. It helps cleanse the skin and unclog pores. It is non-comedogenic and suited for oily, acne-prone skin. Renew-Me S is foaming face wash effectively reduces acne, helps smooth fine wrinkles and improves the skin's tone and texture. It is rich in antioxidants and minerals that boost the healing process of skin in condition such as dry skin, burns, cuts, eczema etc.
-                </p>
                 <br />
                 <br />
                 • Rejuvenates Skin <br />
                 • Reduces The Number Of Wrinkles <br />
                 • Improves Texture And Tone Of Skin <br />
                 • Unblocking And Cleansing Of Pores<br />
+                </p>
+                
             </div>
 
         ,
@@ -84,7 +87,6 @@ const productData = [
         detail_info:
             <div>
                 <p>Minocare F  offers a hair growth solution containing minoxidil 5% and finasteride 0.1%, along with being alcohol-free. The benefits of using Minocare F include promoting hair growth, reducing hair loss, and potentially improving the thickness and density of hair. Minoxidil is known to stimulate hair follicles, while finasteride can help block the hormone responsible for hair loss. Minocare F solution is a combination medicine of minoxidil and finasteride used to treat androgenetic alopecia. Minoxidil is a vasodilator that stimulates hair growth and prevents baldness. when applied topically, minoxidil promotes blood flow to hair follicles, there by providing sufficient nutrition and oxygen to the hair cell. Finasteride reduces DHT, preventing thinning of hair follicles.
-                </p>
                 <br />
                 <br />
                 • stimulates hair growth and slows down the process of balding<br />
@@ -92,6 +94,8 @@ const productData = [
                 • No odour<br />
                 • Easy to use <br />
                 • Dropper and spray applicators <br />
+                </p>
+                
             </div>
         ,
     },
@@ -104,13 +108,15 @@ const productData = [
             <p>
                 Kerafly tablet is a nutraceutical tablet designed for adults, containing a blend of vitamins, minerals, botanical extracts, soya isoflavones, and melatonin. They aim to reduce hair fall, nourish hair, and stimulate hair growth across all hair types. Some benefits of Kerafly tablets include improved hair health, reduced hair fall, and support for hair growth through their unique formulation.
 
-            </p>
-            <br />
+                <br />
             <br />
             • Helps to reduce hair fall<br />
             • Nourishes the hair follicles<br />
             • Stimulates hair growth<br />
             • Suitable for all hair types <br />
+
+            </p>
+            
         </div>,
     },
     {
@@ -130,15 +136,16 @@ const productData = [
                 Vitamin C Face Serum 10% <br />
                 <br />
                  <b>REPAIRS & BRIGHTENS Dermatologically Tested</b>
-       
-
-            </p>
-            <br />
+                 <br />
             <br />
             • vitamin c- a potent antioxidant stimulates collagen synthesis, brightens & reduces dark spots.<br />
             • Ferulic acid protects the skin from free radical damage caused by pollution & sun exposure<br />
             • Ginseng extract boosts hydration, brightens and improves skin complexion <br />
             • Licorice extract visibly improves the appearance of uneven skin tone to reveal clearer skin <br />
+       
+
+            </p>
+            
         </div>,
     },
 ]

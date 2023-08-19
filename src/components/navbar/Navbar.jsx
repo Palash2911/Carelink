@@ -5,7 +5,7 @@ import "./nav.css"
 // import logo from '../../assets/images/logo.jpg';
 
 const Navbar = () => {
-    const sections = ['Home', 'Vision', 'Teams', 'Products', 'AboutUs', 'ContactUs'];
+    const sections = ['Home', 'Mission', 'Teams', 'Products', 'AboutUs', 'ContactUs'];
     const [activeLink, setActiveLink] = useState(sections[0]);
 
     const handleSetActive = (section) => {
@@ -20,7 +20,7 @@ const Navbar = () => {
                 <a className="navbar-brand" href="/"><strong>Care<span>Link</span></strong></a>
                 <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup"
                     aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
-                    <span className="navbar-toggler-icon dark"><i className="fa-solid fa-list-ul"></i></span>
+                    <span className="navbar-toggler-icon dark"><i class="fa-solid fa-list-ul" style={{ color: 'white' }}></i></span>
                 </button>
                 <div className="collapse navbar-collapse" id="navbarNavAltMarkup">
                     <div className="navbar-nav">

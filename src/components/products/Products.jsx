@@ -32,41 +32,37 @@ const Products = () => {
         }
     };
 
+   
+
+
+   
+
     return (
         <>
-            {
-                close ?
-                    <div className='detail_Container'>
-                        <div className='detail_Content'>
-                            <button className='close' onClick={() => setClose(false)}><AiFillCloseCircle /></button>
-                            {
-                                detail.map((x) => {
-                                    return (
-                                        <>
-                                            <div className='row detail_info'>
-                                                <div className='col-lg-12 col-md-12 col-sm-12 img_box'>
-                                                    <img src={x.img} alt={x.Title} />
-                                                </div>
-                                                <div className='col-lg-12 col-md-12 col-sm-12 des-box'>
-                                                    <h2>{x.Title}</h2>
-                                                    <p>{x.detail_info}</p>
-                                                </div>
-
-                                            </div>
-                                        </>
-                                    )
-                                }
-                                )
-                            }
-
-                        </div>
-
-                    </div> : null
-            }
+            {close ? (
+                <div className='detail_Container'>
+                    <div className='detail_Content'>
+                        <button className='close' onClick={() => setClose(false)}>
+                            <AiFillCloseCircle />
+                        </button>
+                        {detail.map((x) => (
+                            <div className='row detail_info' key={x.id}> 
+                                <div className='col-lg-12 col-md-12 col-sm-12 img_box '>
+                                    <img src={x.img} alt={x.Title} />
+                                </div>
+                                <div className='col-lg-12 col-md-12 col-sm-12 des-box'>
+                                    <h2>{x.Title}</h2>
+                                    {x.detail_info}
+                                </div>
+                            </div>
+                        ))}
+                    </div>
+                </div>
+            ) : null}
             <div className='Product-items' id='Products'>
                 <h1>Products</h1>
                 <Carousel responsive={responsive}>
-                    {ProductData.map(currElm => (
+                    {ProductData.map((currElm) => (
                         <div className='card' key={currElm.id}>
                             <img className='product--image' src={currElm.img} alt='' />
                             <h3>{currElm.Title}</h3>

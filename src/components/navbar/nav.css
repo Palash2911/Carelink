@@ -3,7 +3,7 @@
     /* height: 4rem; */
     padding-top: 1rem;
     padding-bottom: 1rem;
-    background: #27A1CE;
+    background: #2f3233;
     position: fixed;
     margin: 0;
     z-index: 1;
@@ -14,7 +14,7 @@
 .navbar .navbar-brand{
     font-size: 1.8rem;
     color: #2A558F;
-    text-shadow: -1px -1px 0 white, 1px -1px 0 white, -1px 1px 0 white, 1px 1px 0 white;
+    /* text-shadow: -1px -1px 0 white, 1px -1px 0 white, -1px 1px 0 white, 1px 1px 0 white; */
     margin: 0;
     padding: 0;
     padding-left: 80px;
@@ -22,10 +22,14 @@
     
 }
 
+.navbar .navbar-brand:hover{
+    transform: scale(1.1);
+}
+
 .navbar .navbar-brand span{
-    color: white;
+    color: #27A1CE;
   /* background-color: white; */
-  text-shadow: -1px -1px 0 #2A558F, 1px -1px 0 #2A558F, -1px 1px 0 #2A558F, 1px 1px 0 #2A558F;
+  /* text-shadow: -1px -1px 0 #2A558F, 1px -1px 0 #2A558F, -1px 1px 0 #2A558F, 1px 1px 0 #2A558F; */
 }
 /* .navbar .navbar-brand .logo{
     width: 40%;

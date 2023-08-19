@@ -1,17 +1,23 @@
-import React from 'react'
+import React, { useState } from 'react';
 import image from '../../assets/images/title-img.jpg';
-import one from '../../assets/images/one.png';
-import two from '../../assets/images/two.png';
-import three from '../../assets/images/three.png';
-import four from '../../assets/images/four.png';
+import teamsData from '../../assets/data/teamsData';
 import blankImg from '../../assets/images/blank1.png';
+import { AiFillCloseCircle } from "react-icons/ai";
 
 import './vision.css';
 
+
+
 const Vision = () => {
+    const [team, setteam] = useState([]);
+    const [close, setClose] = useState(false);
+    const teamPage = (Teams) => {
+        setteam([{ ...Teams }])
+        setClose(true)
+    }
     return (
         <>
-            <section id="Vision">
+            <section id="Mission">
                 <div className='row container-fluid'>
                     <div className='col-lg-6 col-md-12'>
                         <div className='image'>
@@ -21,8 +27,6 @@ const Vision = () => {
                     </div>
                     <div className='col-lg-6 col-md-12'>
                         <div className='description'>
-                            <h1>Vision</h1>
-                            <p>Transforming dermatological care through innovation and improving lives with exceptional skincare solutions</p>
                             <h1 className='mission_head'>Mission</h1>
                             <ul className='mission_list'>
                                 <li className='mission'>Unleash the power of healthy skin through innovative skincare solutions.</li>
@@ -34,34 +38,35 @@ const Vision = () => {
                 </div>
             </section>
 
+            {
+    close ?
+        <div className='team_Container'>
+            <div className='team_Content'>
+                <button className='close' onClick={() => setClose(false)}><AiFillCloseCircle /></button>
+                {
+                    team.map((x) => (
+                        <div className='row team_info' key={x.id}>
+                            <div className='col-lg-12 col-md-12 col-sm-12 des-box'>
+                                <h2>{x.Title}</h2>
+                                {x.team_info}
+                            </div>
+                        </div>
+                    ))}
+            </div>
+        </div> : null
+}
+
             <section id="Teams">
                 <h1 className='feature-head'>Unified Healthcare With Human Centric Approach</h1>
                 <div className="row container-fluid">
-                    <div className="col-lg-3 col-md-3 col-sm-6 features">
+                {teamsData.map((element,index) => (
+                    <div className="col-lg-3 col-md-3 col-sm-6 features"key={element.id}>
                         <div className="icon_div">
-                            <img src={one} alt="" />
+                            <img onClick={() => teamPage(element)} src={element.img} alt="" />
                         </div>
-                        <h3>Team</h3>
+                        <h3>{element.Title}</h3>
                     </div>
-                    <div className="col-lg-3 col-md-3 col-sm-6 features">
-                        <div className="icon_div">
-                            <img src={two} alt="" />
-                        </div>
-                        <h3>Mentors</h3>
-                    </div>
-                    <div className="col-lg-3 col-md-3 col-sm-6 features">
-                        <div className="icon_div">
-                            <img src={three} alt="" />
-                        </div>
-                        <h3>Mission</h3>
-                    </div>
-
-                    <div className="col-lg-3 col-md-3 col-sm-6 features">
-                        <div className="icon_div">
-                            <img src={four} alt="" />
-                        </div>
-                        <h3>Company usp</h3>
-                    </div>
+                    ))}
 
                 </div>
             </section>
