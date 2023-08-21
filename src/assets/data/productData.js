@@ -17,7 +17,7 @@ const productData = [
                 • Enriched with shea butter and Glycerine. <br />
                 • Suitable for all skin types. <br />
                 • Prevents dryness.<br />
-                • Slow the sign of ageing<br />
+                • Slows the sign of ageing<br />
             </p>
         </div>,
     },
@@ -61,7 +61,7 @@ const productData = [
     },
     {
         id: 4,
-        Title: 'Renew-me S',
+        Title: 'Renew-Me S',
         img: pdtImage1,
         Des: 'Renew-Me S Face Wash is a skin-rejuvenating face wash used to manage acne or as an adjuvant in acne management',
         detail_info:
@@ -86,12 +86,12 @@ const productData = [
         Des: 'Minocare F - offers a hair growth solution containing minoxidil 5% and finasteride 0.1%, along with being alcohol-free. The benefits of using Minocare F include promoting hair growth, reducing hair loss, and potentially improving the thickness and density of hair.',
         detail_info:
             <div>
-                <p>Minocare F  offers a hair growth solution containing minoxidil 5% and finasteride 0.1%, along with being alcohol-free. The benefits of using Minocare F include promoting hair growth, reducing hair loss, and potentially improving the thickness and density of hair. Minoxidil is known to stimulate hair follicles, while finasteride can help block the hormone responsible for hair loss. Minocare F solution is a combination medicine of minoxidil and finasteride used to treat androgenetic alopecia. Minoxidil is a vasodilator that stimulates hair growth and prevents baldness. when applied topically, minoxidil promotes blood flow to hair follicles, there by providing sufficient nutrition and oxygen to the hair cell. Finasteride reduces DHT, preventing thinning of hair follicles.
+                <p>Minocare F  offers a hair growth solution containing minoxidil 5% and finasteride 0.1%, along with being alcohol-free. The benefits of using Minocare F includes promoting hair growth, reducing hair loss, and potentially improving the thickness and density of hair. Minoxidil is known to stimulate hair follicles, while finasteride can help block the hormone responsible for hair loss. Minocare F solution is a combination medicine of minoxidil and finasteride used to treat androgenetic alopecia. Minoxidil is a vasodilator that stimulates hair growth and prevents baldness. when applied topically, minoxidil promotes blood flow to hair follicles, there by providing sufficient nutrition and oxygen to the hair cell. Finasteride reduces DHT, preventing thinning of hair follicles.
                 <br />
                 <br />
-                • stimulates hair growth and slows down the process of balding<br />
+                • stimulates hair growth and slows down the process of balding <br />
                 • promote hair growth in androgenetic alopecia <br />
-                • No odour<br />
+                • No odour <br />
                 • Easy to use <br />
                 • Dropper and spray applicators <br />
                 </p>
@@ -106,13 +106,13 @@ const productData = [
         Des: 'Kerafly tablet is a nutraceutical tablet designed for adults, containing a blend of vitamins, minerals, botanical extracts, soya isoflavones, and melatonin. They aim to reduce hair fall, nourish hair, and stimulate hair growth across all hair types.',
         detail_info: <div>
             <p>
-                Kerafly tablet is a nutraceutical tablet designed for adults, containing a blend of vitamins, minerals, botanical extracts, soya isoflavones, and melatonin. They aim to reduce hair fall, nourish hair, and stimulate hair growth across all hair types. Some benefits of Kerafly tablets include improved hair health, reduced hair fall, and support for hair growth through their unique formulation.
+                Kerafly tablet is a nutraceutical tablet designed for adults, containing a blend of vitamins, minerals, botanical extracts, soya isoflavones, and melatonin. They aim to reduce hair fall, nourish hair, and stimulate hair growth across all hair types. Some benefits of Kerafly tablets include improved hair health, reduced hair fall and support for hair growth through their unique formulation.
 
                 <br />
             <br />
-            • Helps to reduce hair fall<br />
-            • Nourishes the hair follicles<br />
-            • Stimulates hair growth<br />
+            • Helps in reducing hair fall <br />
+            • Nourishes the hair follicles <br />
+            • Stimulates hair growth <br />
             • Suitable for all hair types <br />
 
             </p>
@@ -123,10 +123,10 @@ const productData = [
         id: 7,
         Title: 'VC Link',
         img: pdtImage1,
-        Des: 'VC-Link is vitamin c face serum, it promote skin cell turnover, helping to improve the overall texture and smoothness of the skin',
+        Des: 'VC- Link Vitamin C face serum promotes skin cell turnover by improving the overall texture and smoothness of the skin.',
         detail_info: <div>
             <p>
-                VC-Linkoffers several benefits to the skin. Vitamin C is known for its antioxidant properties, which can help protect the skin from damage caused by free radicals. Additionally, using a vitamin C serum can:
+                VC-Link offers several benefits to the skin. Vitamin C is known for its antioxidant properties, which can help protect the skin from damage caused by free radicals. Additionally, using a vitamin C serum can:
                 <br />
                 1. Brighten the Skin: Vitamin C can help fade pigmentation and dark spots, leading to a more even and radiant complexion. <br />
                 2. Boost Collagen Production: Vitamin C plays a role in collagen synthesis, which helps maintain skin's firmness and elasticity, reducing the appearance of fine lines and wrinkles. <br />
@@ -138,7 +138,7 @@ const productData = [
                  <b>REPAIRS & BRIGHTENS Dermatologically Tested</b>
                  <br />
             <br />
-            • vitamin c- a potent antioxidant stimulates collagen synthesis, brightens & reduces dark spots.<br />
+            • Vitamin c - a potent antioxidant stimulates collagen synthesis, brightens & reduces dark spots.<br />
             • Ferulic acid protects the skin from free radical damage caused by pollution & sun exposure<br />
             • Ginseng extract boosts hydration, brightens and improves skin complexion <br />
             • Licorice extract visibly improves the appearance of uneven skin tone to reveal clearer skin <br />

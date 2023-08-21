@@ -11,6 +11,8 @@
     /* box-shadow: 0 0 7px 1px rgb(180, 219, 220,1); */
 }
 
+
+
 .navbar .navbar-brand{
     font-size: 1.8rem;
     color: #2A558F;
@@ -36,7 +38,7 @@
 } */
 
 .collapse{
-    text-align: center;
+    /* text-align: center; */
     justify-content: right;
     padding-right: 8%;
 }
@@ -56,6 +58,13 @@
     color: white;
     font-size: 1.3em;
 }
+
+
+.nav-link .active {
+    text-decoration: underline;
+    color: white; 
+  }
+  
 
 
 @media(max-width : 990px){

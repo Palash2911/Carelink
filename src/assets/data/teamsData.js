@@ -11,10 +11,9 @@ const teamsData = [
         img: pdtImage1,
         team_info: <div>
             <p>
-                •  Sarthak Saoji- Managing Director <br />
-                •  Mihir Vyawahare- Director <br />
-                •  Dr.Sudhir Pandya- Additional Director<br />
-                •  Dr. Sangita Sangvikar-Marketing Head<br />
+                •  Mr. Sarthak Saoji - Managing Director <br />
+                •  Mr. Mihir Vyawahare - Director <br />
+                •  Dr. Sudhir Pandya - Additional Director <br />
             </p>
         </div>,
     },
@@ -24,9 +23,10 @@ const teamsData = [
         img: pdtImage2,
         team_info: <div>
             <p>
-            •  Mr.Prashant  Saboo <br />
-            •  Mr. Girish Rathi<br />
-            •  Dr.Neeraj Vyawahare <br />
+            •  Mr. Prashant  Saboo <br />
+            •  Mr. Girish Rathi <br />
+            •  Dr. Niraj Vyawahare <br />
+            •  Dr. Sangita Sangvikar <br />
             </p>
             
         </div>,

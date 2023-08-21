@@ -9,10 +9,20 @@ import { AiFillCloseCircle } from "react-icons/ai";
 const Products = () => {
     const [detail, setDetail] = useState([]);
     const [close, setClose] = useState(false);
+    const [isBlurred, setIsBlurred] = useState(false);
     const detailPage = (Products) => {
         setDetail([{ ...Products }])
         setClose(true)
+        setIsBlurred(true);
     }
+
+    const handleClose = () => {
+        setClose(false);
+        setIsBlurred(false); 
+      };
+    
+
+    
     const responsive = {
         superLargeDesktop: {
             breakpoint: { max: 4000, min: 3000 },
@@ -39,11 +49,12 @@ const Products = () => {
 
     return (
         <>
+        <div className='Product-items' id='Products'>
             {close ? (
                 <div className='detail_Container'>
                     <div className='detail_Content'>
-                        <button className='close' onClick={() => setClose(false)}>
-                            <AiFillCloseCircle className='svg-close'/>
+                        <button className='close' onClick={handleClose}>
+                            <AiFillCloseCircle />
                         </button>
                         {detail.map((x) => (
                             <div className='row detail_info' key={x.id}> 
@@ -59,9 +70,10 @@ const Products = () => {
                     </div>
                 </div>
             ) : null}
-            <div className='Product-items' id='Products'>
+            
                 <h1>Products</h1>
-                <Carousel responsive={responsive}>
+                <div className={`background ${isBlurred ? 'blur' : ''}`}>
+                <Carousel  responsive={responsive} >
                     {ProductData.map((currElm) => (
                         <div className='card' key={currElm.id}>
                             <img className='product--image' src={currElm.img} alt='' />
@@ -69,8 +81,11 @@ const Products = () => {
                             <p>{currElm.Des}</p>
                             <button onClick={() => detailPage(currElm)}>View Product</button>
                         </div>
+    
+                    
                     ))}
                 </Carousel>
+            </div>
             </div>
         </>
     );

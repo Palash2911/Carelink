@@ -11,10 +11,19 @@ import './vision.css';
 const Vision = () => {
     const [team, setteam] = useState([]);
     const [close, setClose] = useState(false);
+    const [isBlurred, setIsBlurred] = useState(false);
     const teamPage = (Teams) => {
         setteam([{ ...Teams }])
         setClose(true)
+        setIsBlurred(true);
     }
+
+    const handleClose = () => {
+        setClose(false);
+        setIsBlurred(false); 
+      };
+
+
     return (
         <>
             <section id="Mission">
@@ -42,7 +51,7 @@ const Vision = () => {
     close ?
         <div className='team_Container'>
             <div className='team_Content'>
-                <button className='close' onClick={() => setClose(false)}><AiFillCloseCircle className='svg-close' /></button>
+                <button className='close'  onClick={handleClose}><AiFillCloseCircle /></button>
                 {
                     team.map((x) => (
                         <div className='row team_info' key={x.id}>
@@ -58,6 +67,7 @@ const Vision = () => {
 
             <section id="Teams">
                 <h1 className='feature-head'>Unified Healthcare With Human Centric Approach</h1>
+                <div className={`background ${isBlurred ? 'blur' : ''}`}>
                 <div className="row container-fluid">
                 {teamsData.map((element,index) => (
                     <div className="col-lg-3 col-md-3 col-sm-6 features"key={element.id}>
@@ -67,6 +77,8 @@ const Vision = () => {
                         <h3>{element.Title}</h3>
                     </div>
                     ))}
+
+                </div>
                 </div>
             </section>
         </>
