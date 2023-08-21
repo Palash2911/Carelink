@@ -105,6 +105,9 @@
     text-align: justify;
   }
 
+  .background.blur {
+    filter: blur(8px); 
+  }
 
   @media(max-width : 575px){
     .detail_Container{

@@ -109,6 +109,11 @@ h3{
     color: white;
   }
 
+  .background.blur {
+    filter: blur(8px); 
+  }
+
+
 
 @media(max-width : 800px){
     h3 {
