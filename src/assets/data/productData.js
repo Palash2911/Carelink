@@ -105,7 +105,7 @@ const productData = [
         Des: 'Kerafly tablet is a nutraceutical tablet designed for adults, containing a blend of vitamins, minerals, botanical extracts, soya isoflavones, and melatonin. They aim to reduce hair fall, nourish hair and stimulate hair growth across all hair types.',
         detail_info: <div>
             <p>
-                Kerafly tablet is a nutraceutical tablet designed for adults, containing a blend of vitamins, minerals, botanical extracts, soya isoflavones, and melatonin. They aim to reduce hair fall, nourish hair and stimulate hair growth across all hair types. This unique formulation helps in reducing hair fall , nourishes hair and stimulates the hair growth across all hair types.
+                Kerafly tablet is a nutraceutical tablet designed for adults, containing a blend of vitamins, minerals, botanical extracts, soya isoflavones, and melatonin. This unique formulation helps in reducing hair fall, nourishes hair and stimulates the hair growth across all hair types.
                 <br />
             <br />
             • Helps in reducing hair fall <br />
