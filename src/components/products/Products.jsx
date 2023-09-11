@@ -42,11 +42,6 @@ const Products = () => {
         }
     };
 
-   
-
-
-   
-
     return (
         <>
         <div className='Product-items' id='Products'>
@@ -59,7 +54,7 @@ const Products = () => {
                         {detail.map((x) => (
                             <div className='row detail_info' key={x.id}> 
                                 <div className='col-lg-12 col-md-12 col-sm-12 img_box '>
-                                    <img src={x.img} alt={x.Title} />
+                                    <img className='product--image-desc' src={x.img} alt={x.Title} />
                                 </div>
                                 <div className='col-lg-12 col-md-12 col-sm-12 des-box'>
                                     <h2>{x.Title}</h2>
@@ -81,8 +76,6 @@ const Products = () => {
                             <p>{currElm.Des}</p>
                             <button onClick={() => detailPage(currElm)}>View Product</button>
                         </div>
-    
-                    
                     ))}
                 </Carousel>
             </div>

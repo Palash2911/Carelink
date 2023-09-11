@@ -1,11 +1,17 @@
 import pdtImage1 from '../images/product.jpg';
-
+import kerafly from '../images/kerafly.jpg'
+import emocare from '../images/Emocare.jpg'
+import minocare from '../images/minocare.jpg'
+import rediban from '../images/rediiban.jpg'
+import renewme from '../images/renewme.png'
+import ktablet from '../images/kerafly_tablet.jpg'
+import vclink from '../images/VC_link.png'
 
 const productData = [
     {
         id: 1,
         Title: 'Emocare Lotion',
-        img: pdtImage1,
+        img: emocare,
         Des: "Moisturizing lotion for all skin types It’s a combination of Shea butter and glycerin, offers several benefits for your skin",
 
         detail_info: <div>
@@ -23,7 +29,7 @@ const productData = [
     {
         id: 2,
         Title: 'Kerafly Shampoo',
-        img: pdtImage1,
+        img: kerafly,
         Des: 'Kerafly shampoo, enriched with Anagain and caffeine and being sulfate-free, offers several benefits for your hair',
         detail_info: <div>
             <p>Kerafly shampoo, enriched with Anagain and caffeine and being sulfate-free, offers several benefits for your hair. Anagain is derived from organic pea sprouts and is believed to promote hair growth by extending the hair growth phase and revitalizing hair follicles. Caffeine, known for its stimulating properties, can also contribute to hair growth and help improve hair texture.<br /><br />
@@ -42,7 +48,7 @@ const productData = [
     {
         id: 3,
         Title: 'Rediban',
-        img: pdtImage1,
+        img: rediban,
         Des: 'Rediban sunscreen offers a unique hybrid formula that combines non-greasy   gel base with a non-comedogenic and oil-free formulation. Its SPF 30 provides effective sun protection for all skin types.',
         detail_info:
             <div>
@@ -61,7 +67,7 @@ const productData = [
     {
         id: 4,
         Title: 'Renew-Me S',
-        img: pdtImage1,
+        img: renewme,
         Des: 'Renew-Me S Face Wash is a skin-rejuvenating face wash used to manage acne or as an adjuvant in acne management',
         detail_info:
             <div>
@@ -81,7 +87,7 @@ const productData = [
     {
         id: 5,
         Title: 'Minocare F',
-        img: pdtImage1,
+        img: minocare,
         Des: 'Minocare F - offers a hair growth solution containing minoxidil 5% and finasteride 0.1%, along with being alcohol-free. The benefits of using Minocare F include promoting hair growth, reducing hair loss, and potentially improving the thickness and density of hair.',
         detail_info:
             <div>
@@ -101,7 +107,7 @@ const productData = [
     {
         id: 6,
         Title: 'Kerafly Tablet',
-        img: pdtImage1,
+        img: ktablet,
         Des: 'Kerafly tablet is a nutraceutical tablet designed for adults, containing a blend of vitamins, minerals, botanical extracts, soya isoflavones, and melatonin. They aim to reduce hair fall, nourish hair and stimulate hair growth across all hair types.',
         detail_info: <div>
             <p>
@@ -120,7 +126,7 @@ const productData = [
     {
         id: 7,
         Title: 'VC Link',
-        img: pdtImage1,
+        img: vclink,
         Des: 'VC- Link Vitamin C face serum promotes skin cell turnover by improving the overall texture and smoothness of the skin.',
         detail_info: <div>
             <p>
