@@ -9,6 +9,11 @@ section{
     background: #27A1CE;
     margin-left: 0;
     margin-right: 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
 }
 
 .about-details{

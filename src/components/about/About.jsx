@@ -1,12 +1,12 @@
 import React from 'react';
 import { Carousel } from 'react-responsive-carousel';
 import 'react-responsive-carousel/lib/styles/carousel.min.css';
-import kerafly from '../../assets/images/kerafly.jpg'
-import emocare from '../../assets/images/Emocare.jpg'
-import minocare from '../../assets/images/minocare.jpg'
-import rediban from '../../assets/images/rediiban.jpg'
+import kerafly1 from '../../assets/images/kerafly1.jpeg'
+import emocare1 from '../../assets/images/emocare1.jpeg'
+import minocare1 from '../../assets/images/minocare1.jpeg'
+import rediban1 from '../../assets/images/rediban1.jpeg'
 import renewme from '../../assets/images/renewme.png'
-import ktablet from '../../assets/images/kerafly_tablet.jpg'
+import ktablet1 from '../../assets/images/kt1.jpeg'
 import vclink from '../../assets/images/VC_link.png'
 import './about.css';
 
@@ -23,22 +23,22 @@ const About = () => {
                 <div className="col-lg-6 col-md-12">
                     <Carousel showArrows={true} showThumbs={false} showStatus={false} infiniteLoop={true} autoPlay={true} interval={3000}>
                         <div className="aboutImg">
-                            <img src={kerafly} alt="Slide 1" />
+                            <img src={kerafly1} alt="Slide 1" />
                         </div>
                         <div className="aboutImg">
-                            <img src={emocare} alt="Slide 2" />
+                            <img src={emocare1} alt="Slide 2" />
                         </div>
                         <div className="aboutImg">
-                            <img src={minocare} alt="Slide 3" />
+                            <img src={minocare1} alt="Slide 3" />
                         </div>
                         <div className="aboutImg">
-                            <img src={rediban} alt="Slide 4" />
+                            <img src={rediban1} alt="Slide 4" />
                         </div>
                         <div className="aboutImg">
                             <img src={renewme} alt="Slide 5" />
                         </div>
                         <div className="aboutImg">
-                            <img src={ktablet} alt="Slide 6" />
+                            <img src={ktablet1} alt="Slide 6" />
                         </div>
                         <div className="aboutImg">
                             <img src={vclink} alt="Slide 7" />
