@@ -1,0 +1,2617 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CareLink Pharma — Innovating Skin & Hair Health</title>
+    <meta
+      name="description"
+      content="CareLink Pharma delivers cutting-edge dermatological solutions — from scientifically formulated skincare to advanced hair growth therapies."
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,700;1,500;1,700&family=DM+Sans:wght@300;400;500;600&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      /* ════════════════════════════════════════════════
+   CARELINK PHARMA — Light Redesign
+   Palette: Cyan/Teal primary, Emerald accent,
+   Light surfaces, editorial typography
+   ════════════════════════════════════════════════ */
+
+      /* ─── TOKENS ──────────────────────────────────── */
+      :root {
+        --c-primary: #0891b2;
+        --c-primary-dk: #0e7490;
+        --c-primary-dkr: #0c4a6e;
+        --c-primary-lt: #22d3ee;
+        --c-accent: #059669;
+        --c-accent-dk: #047857;
+
+        --bg: #f8fafb;
+        --bg-surface: #ffffff;
+        --bg-tint: #eff8fb;
+        --bg-tint2: #f0fdf9;
+
+        --border: #dde8ec;
+        --border-lt: #ebf3f6;
+
+        --text-heading: #0c2d3d;
+        --text-body: #374956;
+        --text-muted: #7a9aaa;
+        --text-xmuted: #a8bec8;
+
+        --pill-bg: rgba(8, 145, 178, 0.08);
+        --pill-border: rgba(8, 145, 178, 0.2);
+
+        --shadow-xs: 0 1px 3px rgba(12, 74, 110, 0.06);
+        --shadow-sm: 0 4px 16px rgba(12, 74, 110, 0.08);
+        --shadow-md: 0 8px 32px rgba(12, 74, 110, 0.1);
+        --shadow-lg: 0 20px 48px rgba(12, 74, 110, 0.12);
+
+        --r-sm: 6px;
+        --r-md: 12px;
+        --r-lg: 20px;
+        --r-xl: 28px;
+
+        --t-fast: 180ms ease;
+        --t-med: 320ms cubic-bezier(0.4, 0, 0.2, 1);
+
+        --nav-h: 68px;
+        --font-display: "Playfair Display", Georgia, serif;
+        --font-body: "DM Sans", system-ui, sans-serif;
+      }
+
+      /* ─── RESET ───────────────────────────────────── */
+      *,
+      *::before,
+      *::after {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+      }
+      html {
+        scroll-behavior: smooth;
+        font-size: 16px;
+        scroll-padding-top: 80px;
+      }
+      body {
+        font-family: var(--font-body);
+        color: var(--text-body);
+        background: var(--bg);
+        line-height: 1.65;
+        -webkit-font-smoothing: antialiased;
+        overflow-x: hidden;
+      }
+      img {
+        max-width: 100%;
+        display: block;
+      }
+      button {
+        cursor: pointer;
+        border: none;
+        background: none;
+        font-family: inherit;
+        color: inherit;
+      }
+      a {
+        text-decoration: none;
+        color: inherit;
+      }
+      ul,
+      ol {
+        list-style: none;
+      }
+      address {
+        font-style: normal;
+      }
+      h1,
+      h2,
+      h3,
+      h4 {
+        font-family: var(--font-display);
+        line-height: 1.15;
+        color: var(--text-heading);
+      }
+      em {
+        font-style: italic;
+      }
+
+      /* ─── LAYOUT ──────────────────────────────────── */
+      .container {
+        max-width: 1160px;
+        margin: 0 auto;
+        padding: 0 32px;
+      }
+      .section {
+        padding: 100px 0;
+      }
+
+      /* ─── SECTION TYPOGRAPHY ──────────────────────── */
+      .section__head {
+        text-align: center;
+        margin-bottom: 64px;
+      }
+
+      .section__tag {
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+        font-family: var(--font-body);
+        font-size: 0.7rem;
+        font-weight: 600;
+        letter-spacing: 0.2em;
+        text-transform: uppercase;
+        color: var(--c-primary);
+        margin-bottom: 16px;
+      }
+      .section__tag::before,
+      .section__tag::after {
+        content: "";
+        width: 20px;
+        height: 1.5px;
+        background: var(--c-primary-lt);
+      }
+
+      .section__title {
+        font-size: clamp(2rem, 4.5vw, 3rem);
+        font-weight: 700;
+        color: var(--text-heading);
+        margin-bottom: 18px;
+      }
+      .section__title em {
+        color: var(--c-primary);
+      }
+
+      .section__sub {
+        font-size: 0.97rem;
+        color: var(--text-muted);
+        max-width: 520px;
+        margin: 0 auto;
+        line-height: 1.85;
+        font-weight: 400;
+      }
+
+      /* ─── BUTTONS ─────────────────────────────────── */
+      .btn {
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+        font-family: var(--font-body);
+        font-size: 0.88rem;
+        font-weight: 600;
+        padding: 14px 28px;
+        border-radius: 100px;
+        transition: all var(--t-fast);
+        cursor: pointer;
+        white-space: nowrap;
+      }
+      .btn--fill {
+        background: var(--c-primary);
+        color: #fff;
+        box-shadow: 0 4px 16px rgba(8, 145, 178, 0.3);
+      }
+      .btn--fill:hover {
+        background: var(--c-primary-dk);
+        transform: translateY(-2px);
+        box-shadow: 0 8px 24px rgba(8, 145, 178, 0.35);
+      }
+      .btn--outline {
+        background: transparent;
+        color: var(--c-primary);
+        border: 1.5px solid var(--c-primary);
+      }
+      .btn--outline:hover {
+        background: var(--c-primary);
+        color: #fff;
+        transform: translateY(-2px);
+      }
+
+      /* ════════════════════════════════════════════════
+   NAVBAR
+════════════════════════════════════════════════ */
+      .navbar {
+        position: fixed;
+        inset: 0 0 auto 0;
+        z-index: 1000;
+        padding: 18px 0;
+        transition: all var(--t-med);
+        background: transparent;
+      }
+      .navbar--scrolled {
+        background: rgba(248, 250, 251, 0.94);
+        backdrop-filter: blur(20px);
+        -webkit-backdrop-filter: blur(20px);
+        border-bottom: 1px solid var(--border-lt);
+        padding: 12px 0;
+        box-shadow: var(--shadow-xs);
+      }
+      .navbar__inner {
+        max-width: 1160px;
+        margin: 0 auto;
+        padding: 0 32px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 24px;
+      }
+      .navbar__logo {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        font-family: var(--font-body);
+        font-size: 1.05rem;
+        font-weight: 500;
+        color: var(--text-heading);
+      }
+      .logo-mark {
+        width: 36px;
+        height: 36px;
+        background: linear-gradient(
+          135deg,
+          var(--c-primary),
+          var(--c-primary-dk)
+        );
+        color: #fff;
+        border-radius: 10px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-family: var(--font-display);
+        font-weight: 700;
+        font-size: 1.15rem;
+        flex-shrink: 0;
+        transition: transform var(--t-fast);
+      }
+      .navbar__logo:hover .logo-mark {
+        transform: rotate(-5deg) scale(1.05);
+      }
+      .logo-text strong {
+        font-weight: 700;
+        color: var(--c-primary);
+      }
+
+      .navbar__links {
+        display: flex;
+        align-items: center;
+        gap: 2px;
+      }
+      .navbar__links a {
+        font-family: var(--font-body);
+        font-size: 0.85rem;
+        font-weight: 400;
+        color: var(--text-muted);
+        padding: 8px 14px;
+        border-radius: var(--r-sm);
+        transition: all var(--t-fast);
+      }
+      .navbar__links a:hover {
+        color: var(--c-primary);
+        background: var(--pill-bg);
+      }
+      .nav-cta {
+        background: var(--c-primary) !important;
+        color: #fff !important;
+        padding: 10px 20px !important;
+        border-radius: 100px !important;
+        font-weight: 600 !important;
+        margin-left: 8px;
+        box-shadow: 0 3px 12px rgba(8, 145, 178, 0.28) !important;
+      }
+      .nav-cta:hover {
+        background: var(--c-primary-dk) !important;
+        transform: translateY(-1px);
+        box-shadow: 0 6px 20px rgba(8, 145, 178, 0.35) !important;
+      }
+
+      .navbar__toggle {
+        display: none;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 5px;
+        width: 40px;
+        height: 40px;
+        border-radius: var(--r-sm);
+        transition: background var(--t-fast);
+      }
+      .navbar__toggle:hover {
+        background: var(--pill-bg);
+      }
+      .navbar__toggle span {
+        display: block;
+        width: 22px;
+        height: 2px;
+        background: var(--text-heading);
+        border-radius: 2px;
+        transition: all var(--t-med);
+        transform-origin: center;
+      }
+      .navbar__toggle.is-open span:nth-child(1) {
+        transform: translateY(7px) rotate(45deg);
+      }
+      .navbar__toggle.is-open span:nth-child(2) {
+        opacity: 0;
+        transform: scaleX(0);
+      }
+      .navbar__toggle.is-open span:nth-child(3) {
+        transform: translateY(-7px) rotate(-45deg);
+      }
+
+      /* ════════════════════════════════════════════════
+   HERO
+════════════════════════════════════════════════ */
+      .hero {
+        min-height: 100svh;
+        display: flex;
+        align-items: center;
+        background: var(--bg);
+        padding: calc(var(--nav-h) + 56px) 32px 80px;
+        position: relative;
+        overflow: hidden;
+      }
+
+      /* Subtle background texture */
+      .hero::before {
+        content: "";
+        position: absolute;
+        inset: 0;
+        background:
+          radial-gradient(
+            ellipse at 70% 20%,
+            rgba(8, 145, 178, 0.07) 0%,
+            transparent 55%
+          ),
+          radial-gradient(
+            ellipse at 20% 80%,
+            rgba(5, 150, 105, 0.05) 0%,
+            transparent 45%
+          );
+        z-index: 0;
+      }
+
+      .hero__grid {
+        max-width: 1160px;
+        margin: 0 auto;
+        width: 100%;
+        display: grid;
+        grid-template-columns: 1.1fr 1fr;
+        gap: 72px;
+        align-items: center;
+        position: relative;
+        z-index: 1;
+      }
+
+      .hero__eyebrow {
+        display: inline-flex;
+        align-items: center;
+        gap: 10px;
+        font-size: 0.72rem;
+        font-weight: 600;
+        letter-spacing: 0.18em;
+        text-transform: uppercase;
+        color: var(--c-primary);
+        margin-bottom: 24px;
+        background: var(--pill-bg);
+        border: 1px solid var(--pill-border);
+        padding: 7px 14px;
+        border-radius: 100px;
+      }
+      .eyebrow-dot {
+        width: 7px;
+        height: 7px;
+        border-radius: 50%;
+        background: var(--c-primary-lt);
+      }
+
+      .hero__title {
+        font-size: clamp(2.8rem, 6vw, 5rem);
+        font-weight: 700;
+        color: var(--text-heading);
+        letter-spacing: -0.02em;
+        line-height: 1.08;
+        margin-bottom: 24px;
+      }
+      .hero__title em {
+        color: var(--c-primary);
+        font-style: italic;
+      }
+
+      .hero__desc {
+        font-size: 1.03rem;
+        color: var(--text-body);
+        line-height: 1.85;
+        max-width: 480px;
+        margin-bottom: 36px;
+        font-weight: 300;
+      }
+
+      .hero__actions {
+        display: flex;
+        align-items: center;
+        flex-wrap: wrap;
+        gap: 12px;
+        margin-bottom: 56px;
+      }
+
+      .hero__stats {
+        display: flex;
+        align-items: center;
+        gap: 0;
+      }
+      .hero__stat {
+        padding: 0 28px 0 0;
+      }
+      .stat-num {
+        display: block;
+        font-family: var(--font-display);
+        font-size: 2.2rem;
+        font-weight: 700;
+        color: var(--text-heading);
+        letter-spacing: -0.03em;
+        line-height: 1;
+        margin-bottom: 5px;
+      }
+      .stat-label {
+        font-size: 0.7rem;
+        color: var(--text-muted);
+        font-weight: 400;
+        letter-spacing: 0.06em;
+        text-transform: uppercase;
+        white-space: nowrap;
+      }
+      .stat-sep {
+        width: 1px;
+        height: 40px;
+        background: var(--border);
+        flex-shrink: 0;
+        margin-right: 28px;
+      }
+
+      /* Hero Visual — clean illustration panel */
+      .hero__visual {
+        position: relative;
+      }
+
+      .hero__card-stack {
+        position: relative;
+        width: 100%;
+        max-width: 440px;
+        margin: 0 auto;
+      }
+
+      /* Main showcase card */
+      .showcase-card {
+        background: var(--bg-surface);
+        border: 1px solid var(--border);
+        border-radius: var(--r-xl);
+        padding: 36px;
+        box-shadow: var(--shadow-lg);
+        position: relative;
+        z-index: 2;
+      }
+
+      .showcase-card__badge {
+        display: inline-flex;
+        align-items: center;
+        gap: 7px;
+        background: var(--bg-tint);
+        border: 1px solid var(--pill-border);
+        color: var(--c-primary);
+        font-size: 0.72rem;
+        font-weight: 600;
+        letter-spacing: 0.1em;
+        text-transform: uppercase;
+        padding: 5px 12px;
+        border-radius: 100px;
+        margin-bottom: 20px;
+      }
+      .badge-dot {
+        width: 6px;
+        height: 6px;
+        border-radius: 50%;
+        background: var(--c-primary);
+      }
+
+      .showcase-card__title {
+        font-size: 1.1rem;
+        font-weight: 600;
+        color: var(--text-heading);
+        margin-bottom: 6px;
+      }
+      .showcase-card__sub {
+        font-size: 0.83rem;
+        color: var(--text-muted);
+        margin-bottom: 24px;
+      }
+
+      .ingredient-list {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        margin-bottom: 24px;
+      }
+      .ingredient-item {
+        display: flex;
+        align-items: center;
+        gap: 12px;
+      }
+      .ingredient-item__bar-wrap {
+        flex: 1;
+        height: 6px;
+        background: var(--bg-tint);
+        border-radius: 10px;
+        overflow: hidden;
+      }
+      .ingredient-item__bar {
+        height: 100%;
+        background: linear-gradient(
+          90deg,
+          var(--c-primary-lt),
+          var(--c-primary)
+        );
+        border-radius: 10px;
+        animation: bar-grow 1.2s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+        transform-origin: left;
+      }
+      @keyframes bar-grow {
+        from {
+          width: 0;
+        }
+      }
+      .ingredient-item__label {
+        font-size: 0.76rem;
+        font-weight: 500;
+        color: var(--text-body);
+        min-width: 90px;
+      }
+      .ingredient-item__val {
+        font-size: 0.73rem;
+        color: var(--c-primary);
+        font-weight: 600;
+        min-width: 32px;
+        text-align: right;
+      }
+
+      .showcase-card__footer {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding-top: 20px;
+        border-top: 1px solid var(--border-lt);
+      }
+      .showcase-card__rating {
+        display: flex;
+        align-items: center;
+        gap: 6px;
+      }
+      .stars {
+        color: #f59e0b;
+        font-size: 0.85rem;
+        letter-spacing: 1px;
+      }
+      .rating-text {
+        font-size: 0.8rem;
+        color: var(--text-muted);
+      }
+      .showcase-card__tag {
+        background: var(--bg-tint2);
+        color: var(--c-accent);
+        border: 1px solid rgba(5, 150, 105, 0.2);
+        font-size: 0.72rem;
+        font-weight: 600;
+        padding: 4px 12px;
+        border-radius: 100px;
+      }
+
+      /* Floating stat pills */
+      .float-pill {
+        position: absolute;
+        background: var(--bg-surface);
+        border: 1px solid var(--border);
+        border-radius: 100px;
+        padding: 10px 16px;
+        box-shadow: var(--shadow-md);
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        font-size: 0.8rem;
+        font-weight: 500;
+        color: var(--text-heading);
+        z-index: 3;
+        animation: pill-float 4s ease-in-out infinite;
+      }
+      .float-pill:nth-child(2) {
+        animation-delay: -2s;
+      }
+      .float-pill--top {
+        top: -18px;
+        right: -18px;
+      }
+      .float-pill--bottom {
+        bottom: -18px;
+        left: -18px;
+      }
+      @keyframes pill-float {
+        0%,
+        100% {
+          transform: translateY(0);
+        }
+        50% {
+          transform: translateY(-6px);
+        }
+      }
+      .float-pill__icon {
+        width: 28px;
+        height: 28px;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 0.75rem;
+      }
+      .float-pill__icon--teal {
+        background: var(--bg-tint);
+        color: var(--c-primary);
+      }
+      .float-pill__icon--green {
+        background: var(--bg-tint2);
+        color: var(--c-accent);
+      }
+      .float-pill__text strong {
+        display: block;
+        font-size: 0.82rem;
+        color: var(--text-heading);
+      }
+      .float-pill__text span {
+        font-size: 0.72rem;
+        color: var(--text-muted);
+      }
+
+      /* ════════════════════════════════════════════════
+   MISSION
+════════════════════════════════════════════════ */
+      .mission {
+        background: var(--bg-surface);
+        border-top: 1px solid var(--border-lt);
+        border-bottom: 1px solid var(--border-lt);
+      }
+      .mission__grid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 24px;
+      }
+      .mission-card {
+        padding: 40px 32px;
+        background: var(--bg);
+        border: 1px solid var(--border);
+        border-radius: var(--r-lg);
+        transition: all var(--t-med);
+      }
+      .mission-card:hover {
+        transform: translateY(-6px);
+        border-color: var(--c-primary-lt);
+        box-shadow: var(--shadow-md);
+        background: var(--bg-surface);
+      }
+
+      .mission-card__num {
+        font-family: var(--font-display);
+        font-size: 3.5rem;
+        font-weight: 700;
+        line-height: 1;
+        color: var(--border);
+        margin-bottom: 20px;
+        letter-spacing: -0.04em;
+      }
+      .mission-card:hover .mission-card__num {
+        color: rgba(8, 145, 178, 0.15);
+      }
+
+      .mission-card__icon {
+        width: 48px;
+        height: 48px;
+        background: var(--bg-tint);
+        border: 1px solid var(--pill-border);
+        border-radius: var(--r-md);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: var(--c-primary);
+        margin-bottom: 20px;
+        transition: all var(--t-med);
+      }
+      .mission-card:hover .mission-card__icon {
+        background: var(--c-primary);
+        color: #fff;
+        transform: rotate(-5deg) scale(1.08);
+        box-shadow: 0 6px 20px rgba(8, 145, 178, 0.28);
+      }
+      .mission-card h3 {
+        font-family: var(--font-display);
+        font-size: 1.2rem;
+        font-weight: 600;
+        color: var(--text-heading);
+        margin-bottom: 12px;
+      }
+      .mission-card p {
+        font-size: 0.88rem;
+        color: var(--text-muted);
+        line-height: 1.8;
+      }
+
+      /* ════════════════════════════════════════════════
+   PRODUCTS
+════════════════════════════════════════════════ */
+      .products {
+        background: var(--bg);
+      }
+      .products__grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+        gap: 20px;
+      }
+
+      .pcard {
+        background: var(--bg-surface);
+        border: 1px solid var(--border);
+        border-radius: var(--r-lg);
+        overflow: hidden;
+        cursor: pointer;
+        display: flex;
+        flex-direction: column;
+        transition: all var(--t-med);
+      }
+      .pcard:hover {
+        transform: translateY(-6px);
+        border-color: rgba(8, 145, 178, 0.3);
+        box-shadow: var(--shadow-md);
+      }
+
+      .pcard__img-wrap {
+        height: 220px;
+        background: var(--bg-tint);
+        position: relative;
+        overflow: hidden;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+      .pcard__img-wrap img {
+        height: 100%;
+        width: 100%;
+        object-fit: cover;
+        transition: transform var(--t-med);
+      }
+      .pcard:hover .pcard__img-wrap img {
+        transform: scale(1.04);
+      }
+
+      .pcard__tag {
+        position: absolute;
+        top: 12px;
+        left: 12px;
+        background: var(--bg-surface);
+        color: var(--c-primary);
+        border: 1px solid var(--pill-border);
+        font-size: 0.68rem;
+        font-weight: 600;
+        letter-spacing: 0.1em;
+        text-transform: uppercase;
+        padding: 4px 12px;
+        border-radius: 100px;
+        box-shadow: var(--shadow-xs);
+      }
+
+      .pcard__body {
+        padding: 24px;
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+      }
+      .pcard__title {
+        font-family: var(--font-display);
+        font-size: 1.15rem;
+        font-weight: 600;
+        color: var(--text-heading);
+        margin-bottom: 10px;
+      }
+      .pcard__desc {
+        font-size: 0.85rem;
+        color: var(--text-muted);
+        line-height: 1.75;
+        flex: 1;
+        margin-bottom: 18px;
+      }
+      .pcard__cta {
+        display: flex;
+        align-items: center;
+        gap: 6px;
+        font-size: 0.82rem;
+        font-weight: 600;
+        color: var(--c-primary);
+        transition: gap var(--t-fast);
+      }
+      .pcard:hover .pcard__cta {
+        gap: 10px;
+      }
+      .pcard__cta svg {
+        transition: transform var(--t-fast);
+      }
+      .pcard:hover .pcard__cta svg {
+        transform: translateX(3px);
+      }
+
+      /* ════════════════════════════════════════════════
+   MODAL
+════════════════════════════════════════════════ */
+      .modal-overlay {
+        position: fixed;
+        inset: 0;
+        z-index: 2000;
+        background: rgba(12, 45, 61, 0.5);
+        backdrop-filter: blur(8px);
+        -webkit-backdrop-filter: blur(8px);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 24px;
+      }
+      .modal-overlay[hidden] {
+        display: none;
+      }
+
+      .modal {
+        background: var(--bg-surface);
+        border-radius: var(--r-xl);
+        max-width: 780px;
+        width: 100%;
+        box-shadow: var(--shadow-lg);
+        border: 1px solid var(--border);
+        position: relative;
+        overflow: hidden;
+        animation: modal-in 240ms cubic-bezier(0.16, 1, 0.3, 1);
+      }
+      @keyframes modal-in {
+        from {
+          opacity: 0;
+          transform: translateY(20px) scale(0.97);
+        }
+        to {
+          opacity: 1;
+          transform: translateY(0) scale(1);
+        }
+      }
+
+      .modal__close {
+        position: absolute;
+        top: 14px;
+        right: 14px;
+        width: 36px;
+        height: 36px;
+        border-radius: 50%;
+        background: var(--bg);
+        border: 1px solid var(--border);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: var(--text-muted);
+        z-index: 1;
+        transition: all var(--t-fast);
+      }
+      .modal__close:hover {
+        background: var(--c-primary);
+        border-color: var(--c-primary);
+        color: #fff;
+        transform: rotate(90deg);
+      }
+      .modal__body {
+        display: flex;
+        min-height: 340px;
+      }
+      .modal__img-side {
+        flex: 0 0 280px;
+        background: var(--bg-tint);
+        border-right: 1px solid var(--border-lt);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 36px 24px;
+        border-radius: var(--r-xl) 0 0 var(--r-xl);
+      }
+      .modal__img-side img {
+        max-height: 240px;
+        max-width: 100%;
+        object-fit: contain;
+      }
+      .modal__info {
+        flex: 1;
+        padding: 40px 36px;
+        overflow-y: auto;
+      }
+
+      .modal__tag {
+        display: inline-flex;
+        align-items: center;
+        background: var(--pill-bg);
+        border: 1px solid var(--pill-border);
+        color: var(--c-primary);
+        font-size: 0.68rem;
+        font-weight: 600;
+        letter-spacing: 0.12em;
+        text-transform: uppercase;
+        padding: 4px 12px;
+        border-radius: 100px;
+        margin-bottom: 14px;
+      }
+      .modal__title {
+        font-family: var(--font-display);
+        font-size: 1.7rem;
+        font-weight: 700;
+        color: var(--text-heading);
+        margin-bottom: 16px;
+      }
+      .modal__content {
+        font-size: 0.88rem;
+        color: var(--text-body);
+        line-height: 1.9;
+      }
+      .modal__content p {
+        margin-bottom: 14px;
+      }
+      .modal__content b {
+        color: var(--text-heading);
+        font-weight: 600;
+      }
+
+      /* ════════════════════════════════════════════════
+   TEAM
+════════════════════════════════════════════════ */
+      .team {
+        background: var(--bg-surface);
+        border-top: 1px solid var(--border-lt);
+        border-bottom: 1px solid var(--border-lt);
+      }
+      .team__grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 56px;
+      }
+      .team__block-label {
+        font-size: 0.68rem;
+        font-weight: 600;
+        letter-spacing: 0.15em;
+        text-transform: uppercase;
+        color: var(--c-primary);
+        margin-bottom: 20px;
+        padding-bottom: 12px;
+        border-bottom: 1.5px solid var(--border-lt);
+      }
+      .team__cards {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+      }
+
+      .tcard {
+        display: flex;
+        align-items: center;
+        gap: 16px;
+        padding: 18px 20px;
+        background: var(--bg);
+        border: 1px solid var(--border);
+        border-radius: var(--r-md);
+        transition: all var(--t-fast);
+      }
+      .tcard:hover {
+        border-color: rgba(8, 145, 178, 0.25);
+        box-shadow: var(--shadow-sm);
+        transform: translateX(4px);
+        background: var(--bg-surface);
+      }
+      .tcard__avatar {
+        width: 44px;
+        height: 44px;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-family: var(--font-display);
+        font-size: 1.05rem;
+        font-weight: 700;
+        flex-shrink: 0;
+        transition: transform var(--t-fast);
+      }
+      .tcard:hover .tcard__avatar {
+        transform: scale(1.08);
+      }
+      .tcard__avatar--primary {
+        background: var(--bg-tint);
+        color: var(--c-primary);
+        border: 1.5px solid var(--pill-border);
+      }
+      .tcard__avatar--accent {
+        background: var(--bg-tint2);
+        color: var(--c-accent);
+        border: 1.5px solid rgba(5, 150, 105, 0.2);
+      }
+      .tcard__name {
+        font-size: 0.9rem;
+        font-weight: 600;
+        color: var(--text-heading);
+      }
+      .tcard__role {
+        font-size: 0.78rem;
+        color: var(--text-muted);
+        margin-top: 2px;
+      }
+
+      /* ════════════════════════════════════════════════
+   ABOUT
+════════════════════════════════════════════════ */
+      .about {
+        background: var(--bg);
+      }
+      .about__inner {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 80px;
+        align-items: center;
+      }
+
+      .about__text {
+        font-size: 0.95rem;
+        color: var(--text-body);
+        line-height: 1.9;
+        margin-bottom: 18px;
+      }
+      .about__highlights {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        margin-top: 28px;
+      }
+      .about__hl {
+        display: flex;
+        align-items: center;
+        gap: 12px;
+        font-size: 0.88rem;
+        font-weight: 500;
+        color: var(--text-heading);
+        padding: 13px 16px;
+        background: var(--bg-surface);
+        border: 1px solid var(--border);
+        border-radius: var(--r-md);
+        transition: all var(--t-fast);
+      }
+      .about__hl:hover {
+        border-color: rgba(8, 145, 178, 0.25);
+        background: var(--bg-tint);
+      }
+      .about__hl-icon {
+        color: var(--c-primary);
+        font-size: 0.9rem;
+      }
+
+      /* About visual — clean stats panel */
+      .about__visual {
+        display: flex;
+        flex-direction: column;
+        gap: 16px;
+      }
+
+      .about-stat-card {
+        background: var(--bg-surface);
+        border: 1px solid var(--border);
+        border-radius: var(--r-lg);
+        padding: 28px 32px;
+        transition: all var(--t-fast);
+      }
+      .about-stat-card:hover {
+        border-color: rgba(8, 145, 178, 0.25);
+        box-shadow: var(--shadow-sm);
+      }
+
+      .about-stat-card--accent {
+        background: linear-gradient(
+          135deg,
+          var(--c-primary),
+          var(--c-primary-dk)
+        );
+        border-color: transparent;
+        color: #fff;
+      }
+
+      .stat-card__label {
+        font-size: 0.72rem;
+        font-weight: 600;
+        letter-spacing: 0.14em;
+        text-transform: uppercase;
+        color: var(--text-muted);
+        margin-bottom: 10px;
+      }
+      .about-stat-card--accent .stat-card__label {
+        color: rgba(255, 255, 255, 0.65);
+      }
+
+      .stat-card__value {
+        font-family: var(--font-display);
+        font-size: 2.4rem;
+        font-weight: 700;
+        color: var(--text-heading);
+        line-height: 1;
+        margin-bottom: 6px;
+      }
+      .about-stat-card--accent .stat-card__value {
+        color: #fff;
+      }
+
+      .stat-card__sub {
+        font-size: 0.82rem;
+        color: var(--text-muted);
+      }
+      .about-stat-card--accent .stat-card__sub {
+        color: rgba(255, 255, 255, 0.7);
+      }
+
+      .about-stat-row {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 16px;
+      }
+
+      .about-tag-list {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 8px;
+        margin-top: 14px;
+      }
+      .about-tag {
+        background: rgba(255, 255, 255, 0.18);
+        color: #fff;
+        font-size: 0.72rem;
+        font-weight: 600;
+        letter-spacing: 0.08em;
+        text-transform: uppercase;
+        padding: 5px 12px;
+        border-radius: 100px;
+      }
+
+      /* ════════════════════════════════════════════════
+   CONTACT
+════════════════════════════════════════════════ */
+      .contact {
+        background: var(--bg-surface);
+        border-top: 1px solid var(--border-lt);
+      }
+      .contact__grid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 20px;
+        max-width: 860px;
+        margin: 0 auto;
+      }
+      .ccard {
+        display: flex;
+        align-items: center;
+        gap: 16px;
+        padding: 28px 24px;
+        background: var(--bg);
+        border: 1px solid var(--border);
+        border-radius: var(--r-lg);
+        transition: all var(--t-med);
+      }
+      .ccard:hover {
+        border-color: rgba(8, 145, 178, 0.28);
+        box-shadow: var(--shadow-sm);
+        transform: translateY(-4px);
+        background: var(--bg-surface);
+      }
+      .ccard__icon {
+        width: 48px;
+        height: 48px;
+        border-radius: var(--r-md);
+        background: var(--bg-tint);
+        border: 1px solid var(--pill-border);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: var(--c-primary);
+        flex-shrink: 0;
+        transition: all var(--t-fast);
+      }
+      .ccard:hover .ccard__icon {
+        background: var(--c-primary);
+        color: #fff;
+        border-color: var(--c-primary);
+      }
+      .ccard__label {
+        font-size: 0.67rem;
+        font-weight: 600;
+        letter-spacing: 0.12em;
+        text-transform: uppercase;
+        color: var(--text-muted);
+        margin-bottom: 4px;
+      }
+      .ccard__value {
+        font-size: 0.85rem;
+        font-weight: 500;
+        color: var(--text-heading);
+      }
+
+      /* ════════════════════════════════════════════════
+   FOOTER
+════════════════════════════════════════════════ */
+      .footer {
+        background: var(--c-primary-dkr);
+        color: rgba(255, 255, 255, 0.65);
+      }
+      .footer__inner {
+        max-width: 1160px;
+        margin: 0 auto;
+        padding: 72px 32px 48px;
+        display: grid;
+        grid-template-columns: 2fr 1fr 1.3fr;
+        gap: 48px;
+      }
+      .footer__logo {
+        font-family: var(--font-body);
+        font-size: 1.1rem;
+        font-weight: 500;
+        color: #fff;
+        display: block;
+        margin-bottom: 14px;
+      }
+      .footer__logo strong {
+        font-weight: 700;
+        color: var(--c-primary-lt);
+      }
+      .footer__tagline {
+        font-size: 0.85rem;
+        color: rgba(255, 255, 255, 0.45);
+        line-height: 1.8;
+        max-width: 260px;
+        margin-bottom: 24px;
+      }
+      .footer__social {
+        display: flex;
+        gap: 8px;
+      }
+      .footer__social a {
+        width: 36px;
+        height: 36px;
+        border-radius: var(--r-sm);
+        background: rgba(255, 255, 255, 0.07);
+        border: 1px solid rgba(255, 255, 255, 0.12);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: rgba(255, 255, 255, 0.45);
+        transition: all var(--t-fast);
+      }
+      .footer__social a:hover {
+        background: var(--c-primary-lt);
+        border-color: var(--c-primary-lt);
+        color: var(--c-primary-dkr);
+        transform: translateY(-2px);
+      }
+      .footer__col-title {
+        font-size: 0.68rem;
+        font-weight: 600;
+        letter-spacing: 0.14em;
+        text-transform: uppercase;
+        color: rgba(255, 255, 255, 0.3);
+        margin-bottom: 16px;
+      }
+      .footer__nav {
+        display: flex;
+        flex-direction: column;
+      }
+      .footer__nav a {
+        font-size: 0.86rem;
+        color: rgba(255, 255, 255, 0.45);
+        padding: 5px 0;
+        transition: color var(--t-fast);
+      }
+      .footer__nav a:hover {
+        color: var(--c-primary-lt);
+      }
+      .footer__contact {
+        display: flex;
+        flex-direction: column;
+      }
+      .footer__contact p {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        font-size: 0.85rem;
+        color: rgba(255, 255, 255, 0.45);
+        padding: 5px 0;
+      }
+      .footer__contact a {
+        color: inherit;
+        transition: color var(--t-fast);
+      }
+      .footer__contact a:hover {
+        color: var(--c-primary-lt);
+      }
+      .footer__bottom {
+        border-top: 1px solid rgba(255, 255, 255, 0.08);
+        padding: 22px 32px;
+        text-align: center;
+      }
+      .footer__bottom p {
+        font-size: 0.78rem;
+        color: rgba(255, 255, 255, 0.25);
+      }
+
+      /* ════════════════════════════════════════════════
+   SCROLL TO TOP
+════════════════════════════════════════════════ */
+      .scroll-top {
+        position: fixed;
+        bottom: 28px;
+        right: 28px;
+        width: 44px;
+        height: 44px;
+        border-radius: 50%;
+        background: var(--c-primary);
+        color: #fff;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        box-shadow: 0 6px 20px rgba(8, 145, 178, 0.35);
+        z-index: 500;
+        transition: all var(--t-fast);
+      }
+      .scroll-top[hidden] {
+        display: none;
+      }
+      .scroll-top:hover {
+        transform: translateY(-3px);
+        background: var(--c-primary-dk);
+      }
+
+      /* ════════════════════════════════════════════════
+   REVEAL ANIMATIONS
+════════════════════════════════════════════════ */
+      .reveal {
+        opacity: 0;
+        transform: translateY(28px);
+        transition:
+          opacity 600ms ease,
+          transform 600ms cubic-bezier(0.16, 1, 0.3, 1);
+      }
+      .reveal.is-visible {
+        opacity: 1;
+        transform: translateY(0);
+      }
+
+      /* ════════════════════════════════════════════════
+   RESPONSIVE — 1024px
+════════════════════════════════════════════════ */
+      @media (max-width: 1024px) {
+        .hero__grid {
+          gap: 48px;
+        }
+        .about__inner {
+          gap: 48px;
+        }
+      }
+
+      /* ════════════════════════════════════════════════
+   RESPONSIVE — 880px
+════════════════════════════════════════════════ */
+      @media (max-width: 880px) {
+        .navbar__links {
+          position: absolute;
+          top: 100%;
+          left: 0;
+          width: 100%;
+
+          background: var(--bg-surface);
+          border-top: 1px solid var(--border);
+
+          flex-direction: column;
+          align-items: stretch;
+
+          padding: 20px;
+
+          opacity: 0;
+          transform: translateY(-10px);
+          pointer-events: none;
+
+          transition: all var(--t-med);
+        }
+
+        .navbar__links .nav-cta {
+          margin-top: 16px;
+          text-align: center;
+
+          color: #fff !important;
+
+          padding: 14px !important;
+          border-radius: 999px !important;
+
+          box-shadow: 0 6px 18px rgba(5, 150, 105, 0.25);
+        }
+
+        /* hover / tap feedback */
+        .navbar__links .nav-cta:active {
+          background: var(--c-primary) !important;
+        }
+
+        /* OPEN STATE */
+        .navbar__links.is-open {
+          opacity: 1;
+          transform: translateY(0);
+          pointer-events: auto;
+        }
+        .navbar__links a {
+          font-size: 1.05rem;
+          padding: 14px 32px;
+          color: var(--text-muted) !important;
+          border-radius: var(--r-md);
+        }
+        .navbar__links a:hover {
+          color: var(--c-primary) !important;
+          background: var(--pill-bg) !important;
+        }
+        .nav-cta {
+          margin-top: 8px;
+        }
+        .navbar__toggle {
+          display: flex;
+        }
+
+        .hero {
+          padding: calc(var(--nav-h) + 36px) 24px 56px;
+          min-height: auto;
+        }
+        .hero__grid {
+          grid-template-columns: 1fr;
+          gap: 48px;
+        }
+        .hero__visual {
+          order: -1;
+        }
+
+        .mission__grid {
+          grid-template-columns: 1fr;
+        }
+        .team__grid {
+          grid-template-columns: 1fr;
+          gap: 36px;
+        }
+        .about__inner {
+          grid-template-columns: 1fr;
+          gap: 40px;
+        }
+        .about__visual {
+          order: -1;
+        }
+        .contact__grid {
+          grid-template-columns: 1fr;
+          max-width: 380px;
+        }
+        .footer__inner {
+          grid-template-columns: 1fr 1fr;
+          gap: 36px;
+        }
+        .footer__brand {
+          grid-column: 1 / -1;
+        }
+      }
+
+      /* ════════════════════════════════════════════════
+   RESPONSIVE — 600px
+════════════════════════════════════════════════ */
+      @media (max-width: 600px) {
+        .container {
+          padding: 0 20px;
+        }
+        .section {
+          padding: 72px 0;
+        }
+        .hero {
+          padding: calc(var(--nav-h) + 24px) 20px 48px;
+        }
+        .hero__title {
+          font-size: 2.4rem;
+        }
+        .hero__stats {
+          flex-wrap: wrap;
+          gap: 16px;
+        }
+        .stat-sep {
+          display: none;
+        }
+        .products__grid {
+          grid-template-columns: 1fr;
+          max-width: 380px;
+          margin: 0 auto;
+        }
+        .modal__body {
+          flex-direction: column;
+        }
+        .modal__img-side {
+          flex: 0 0 auto;
+          border-right: none;
+          border-bottom: 1px solid var(--border-lt);
+          border-radius: var(--r-xl) var(--r-xl) 0 0;
+          min-height: 200px;
+        }
+        .footer__inner {
+          grid-template-columns: 1fr;
+        }
+        .about-stat-row {
+          grid-template-columns: 1fr;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <!-- NAVBAR -->
+    <header id="navbar" class="navbar" role="banner">
+      <div class="navbar__inner">
+        <a
+          class="navbar__logo"
+          href="#home"
+          onclick="
+            navTo('home');
+            return false;
+          "
+          aria-label="CareLink Pharma home"
+        >
+          <div class="logo-mark" aria-hidden="true">C</div>
+          <span class="logo-text">Care<strong>Link</strong> Pharma</span>
+        </a>
+        <nav class="navbar__links" id="navLinks" aria-label="Main navigation">
+          <a
+            href="#home"
+            onclick="
+              navTo('home');
+              return false;
+            "
+            >Home</a
+          >
+          <a
+            href="#mission"
+            onclick="
+              navTo('mission');
+              return false;
+            "
+            >Mission</a
+          >
+          <a
+            href="#products"
+            onclick="
+              navTo('products');
+              return false;
+            "
+            >Products</a
+          >
+          <a
+            href="#team"
+            onclick="
+              navTo('team');
+              return false;
+            "
+            >Team</a
+          >
+          <a
+            href="#about"
+            onclick="
+              navTo('about');
+              return false;
+            "
+            >About</a
+          >
+          <a
+            href="#contact"
+            onclick="
+              navTo('contact');
+              return false;
+            "
+            class="nav-cta"
+            >Contact</a
+          >
+        </nav>
+        <button
+          class="navbar__toggle"
+          id="menuToggle"
+          aria-label="Open menu"
+          aria-expanded="false"
+          aria-controls="navLinks"
+        >
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </header>
+
+    <main>
+      <!-- HERO -->
+      <section id="home" class="hero">
+        <div class="hero__grid">
+          <div class="hero__content">
+            <div class="hero__eyebrow">
+              <span class="eyebrow-dot" aria-hidden="true"></span>
+              Dermatological Innovation
+            </div>
+            <h1 class="hero__title">
+              Science-backed<br />
+              care for your<br />
+              <em>skin & hair</em>
+            </h1>
+            <p class="hero__desc">
+              CareLink Pharma delivers clinically formulated dermatological
+              solutions — combining advanced research with gentle, effective
+              ingredients for lasting results.
+            </p>
+            <div class="hero__actions">
+              <a
+                href="#products"
+                onclick="
+                  navTo('products');
+                  return false;
+                "
+                class="btn btn--fill"
+              >
+                View Products
+                <svg
+                  width="16"
+                  height="16"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2.5"
+                  aria-hidden="true"
+                >
+                  <path d="M5 12h14M12 5l7 7-7 7" />
+                </svg>
+              </a>
+              <a
+                href="#about"
+                onclick="
+                  navTo('about');
+                  return false;
+                "
+                class="btn btn--outline"
+                >Learn More</a
+              >
+            </div>
+            <div class="hero__stats" role="list">
+              <div class="hero__stat" role="listitem">
+                <span class="stat-num" data-count="7">7+</span>
+                <span class="stat-label">Products</span>
+              </div>
+              <div class="stat-sep" aria-hidden="true"></div>
+              <div class="hero__stat" role="listitem">
+                <span class="stat-num" data-count="100">100%</span>
+                <span class="stat-label">Clinically Tested</span>
+              </div>
+              <div class="stat-sep" aria-hidden="true"></div>
+              <div class="hero__stat" role="listitem">
+                <span class="stat-num">10+</span>
+                <span class="stat-label">Years Expertise</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Hero Visual -->
+          <div class="hero__visual" aria-hidden="true">
+            <div class="hero__card-stack">
+              <!-- Floating pills -->
+              <div class="float-pill float-pill--top">
+                <div class="float-pill__icon float-pill__icon--green">
+                  <svg
+                    width="13"
+                    height="13"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2.5"
+                  >
+                    <polyline points="20 6 9 17 4 12" />
+                  </svg>
+                </div>
+                <div class="float-pill__text">
+                  <strong>Dermatologist Approved</strong>
+                  <span>All formulations</span>
+                </div>
+              </div>
+
+              <!-- Main card -->
+              <div class="showcase-card">
+                <div class="showcase-card__badge">
+                  <span class="badge-dot"></span>
+                  Featured Product
+                </div>
+                <p class="showcase-card__title">Kerafly Shampoo</p>
+                <p class="showcase-card__sub">
+                  Advanced hair restoration formula
+                </p>
+                <div class="ingredient-list">
+                  <div class="ingredient-item">
+                    <span class="ingredient-item__label">Anagain</span>
+                    <div class="ingredient-item__bar-wrap">
+                      <div
+                        class="ingredient-item__bar"
+                        style="width: 88%"
+                      ></div>
+                    </div>
+                    <span class="ingredient-item__val">88%</span>
+                  </div>
+                  <div class="ingredient-item">
+                    <span class="ingredient-item__label">Caffeine</span>
+                    <div class="ingredient-item__bar-wrap">
+                      <div
+                        class="ingredient-item__bar"
+                        style="width: 72%; animation-delay: 0.15s"
+                      ></div>
+                    </div>
+                    <span class="ingredient-item__val">72%</span>
+                  </div>
+                  <div class="ingredient-item">
+                    <span class="ingredient-item__label">Keratin</span>
+                    <div class="ingredient-item__bar-wrap">
+                      <div
+                        class="ingredient-item__bar"
+                        style="width: 65%; animation-delay: 0.3s"
+                      ></div>
+                    </div>
+                    <span class="ingredient-item__val">65%</span>
+                  </div>
+                </div>
+                <div class="showcase-card__footer">
+                  <div class="showcase-card__rating">
+                    <span class="stars">★★★★★</span>
+                    <span class="rating-text">4.9 / 5</span>
+                  </div>
+                  <span class="showcase-card__tag">SLS-Free</span>
+                </div>
+              </div>
+
+              <div class="float-pill float-pill--bottom">
+                <div class="float-pill__icon float-pill__icon--teal">
+                  <svg
+                    width="13"
+                    height="13"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2.5"
+                  >
+                    <circle cx="12" cy="8" r="6" />
+                    <path d="M15.477 12.89 17 22l-5-3-5 3 1.523-9.11" />
+                  </svg>
+                </div>
+                <div class="float-pill__text">
+                  <strong>7 Products</strong>
+                  <span>Skin & hair range</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- MISSION -->
+      <section id="mission" class="section mission">
+        <div class="container">
+          <div class="section__head reveal">
+            <div class="section__tag">Our Purpose</div>
+            <h2 class="section__title">What We <em>Stand For</em></h2>
+            <p class="section__sub">
+              Three pillars that guide everything we research, formulate, and
+              bring to market.
+            </p>
+          </div>
+          <div class="mission__grid">
+            <div class="mission-card reveal">
+              <div class="mission-card__num">01</div>
+              <div class="mission-card__icon" aria-hidden="true">
+                <svg
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  aria-hidden="true"
+                >
+                  <path
+                    d="M9 3H5a2 2 0 0 0-2 2v4m6-6h10a2 2 0 0 1 2 2v4M9 3v18m0 0h10a2 2 0 0 0 2-2v-4M9 21H5a2 2 0 0 1-2-2v-4m0 0h18"
+                  />
+                </svg>
+              </div>
+              <h3>Scientific Formulation</h3>
+              <p>
+                Every product is built on peer-reviewed research and clinical
+                evidence, ensuring you get solutions that actually work.
+              </p>
+            </div>
+            <div class="mission-card reveal">
+              <div class="mission-card__num">02</div>
+              <div class="mission-card__icon" aria-hidden="true">
+                <svg
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  aria-hidden="true"
+                >
+                  <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" />
+                </svg>
+              </div>
+              <h3>Advanced Dermatology</h3>
+              <p>
+                Transforming dermatological care with groundbreaking
+                technologies and a deep understanding of skin biology.
+              </p>
+            </div>
+            <div class="mission-card reveal">
+              <div class="mission-card__num">03</div>
+              <div class="mission-card__icon" aria-hidden="true">
+                <svg
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  aria-hidden="true"
+                >
+                  <circle cx="12" cy="8" r="6" />
+                  <path d="M15.477 12.89 17 22l-5-3-5 3 1.523-9.11" />
+                </svg>
+              </div>
+              <h3>Better Lives</h3>
+              <p>
+                Enhancing wellbeing by providing effective, reliable solutions
+                for a wide range of skin and hair conditions.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- PRODUCTS -->
+      <section id="products" class="section products">
+        <div class="container">
+          <div class="section__head reveal">
+            <div class="section__tag">Our Range</div>
+            <h2 class="section__title">Product <em>Portfolio</em></h2>
+            <p class="section__sub">
+              Scientifically formulated products designed to deliver visible
+              results for skin and hair health.
+            </p>
+          </div>
+          <div class="products__grid" id="productsGrid"></div>
+        </div>
+      </section>
+
+      <!-- TEAM -->
+      <section id="team" class="section team">
+        <div class="container">
+          <div class="section__head reveal">
+            <div class="section__tag">The People</div>
+            <h2 class="section__title">Team & <em>Mentors</em></h2>
+            <p class="section__sub">
+              Led by experienced professionals dedicated to transforming
+              dermatological care.
+            </p>
+          </div>
+          <div class="team__grid">
+            <div class="team__block reveal">
+              <p class="team__block-label">Leadership</p>
+              <div class="team__cards">
+                <div class="tcard">
+                  <div class="tcard__avatar tcard__avatar--primary">S</div>
+                  <div>
+                    <p class="tcard__name">Mr. Sarthak Saoji</p>
+                    <p class="tcard__role">Managing Director</p>
+                  </div>
+                </div>
+                <div class="tcard">
+                  <div class="tcard__avatar tcard__avatar--primary">M</div>
+                  <div>
+                    <p class="tcard__name">Mr. Mihir Vyawahare</p>
+                    <p class="tcard__role">Director</p>
+                  </div>
+                </div>
+                <div class="tcard">
+                  <div class="tcard__avatar tcard__avatar--primary">S</div>
+                  <div>
+                    <p class="tcard__name">Dr. Sudhir Pandya</p>
+                    <p class="tcard__role">Additional Director</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="team__block reveal">
+              <p class="team__block-label">Mentors</p>
+              <div class="team__cards">
+                <div class="tcard">
+                  <div class="tcard__avatar tcard__avatar--accent">P</div>
+                  <div>
+                    <p class="tcard__name">Mr. Prashant Saboo</p>
+                    <p class="tcard__role">Mentor</p>
+                  </div>
+                </div>
+                <div class="tcard">
+                  <div class="tcard__avatar tcard__avatar--accent">G</div>
+                  <div>
+                    <p class="tcard__name">Mr. Girish Rathi</p>
+                    <p class="tcard__role">Mentor</p>
+                  </div>
+                </div>
+                <div class="tcard">
+                  <div class="tcard__avatar tcard__avatar--accent">N</div>
+                  <div>
+                    <p class="tcard__name">Dr. Niraj Vyawahare</p>
+                    <p class="tcard__role">Mentor</p>
+                  </div>
+                </div>
+                <div class="tcard">
+                  <div class="tcard__avatar tcard__avatar--accent">S</div>
+                  <div>
+                    <p class="tcard__name">Dr. Sangita Sangvikar</p>
+                    <p class="tcard__role">Mentor</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ABOUT -->
+      <section id="about" class="section about">
+        <div class="container">
+          <div class="about__inner">
+            <div class="about__copy reveal">
+              <div class="section__tag">Why We Exist</div>
+              <h2
+                class="section__title"
+                style="text-align: left; margin-bottom: 20px"
+              >
+                Why <em>Dermatology?</em>
+              </h2>
+              <p class="about__text">
+                Dermatology focuses on the study, diagnosis, and treatment of
+                skin-related conditions. As the largest sensory organ and the
+                most visible part of the body, skin health is essential to
+                overall wellbeing.
+              </p>
+              <p class="about__text">
+                Whether it's acne, eczema, psoriasis, or aging-related issues,
+                dermatology plays a vital role in improving quality of life. We
+                combine medical expertise with aesthetic solutions and a
+                holistic approach.
+              </p>
+              <ul class="about__highlights" aria-label="Key highlights">
+                <li class="about__hl">
+                  <span class="about__hl-icon" aria-hidden="true">→</span
+                  >Medical & Aesthetic Expertise
+                </li>
+                <li class="about__hl">
+                  <span class="about__hl-icon" aria-hidden="true">→</span
+                  >Evidence-Based Formulations
+                </li>
+                <li class="about__hl">
+                  <span class="about__hl-icon" aria-hidden="true">→</span
+                  >Holistic Skin Health Approach
+                </li>
+              </ul>
+            </div>
+            <div class="about__visual reveal" aria-hidden="true">
+              <div class="about-stat-card about-stat-card--accent">
+                <p class="stat-card__label">Research-backed</p>
+                <p class="stat-card__value">100%</p>
+                <p class="stat-card__sub">
+                  All formulations clinically tested and dermatologist approved
+                </p>
+                <div class="about-tag-list">
+                  <span class="about-tag">Science</span>
+                  <span class="about-tag">Innovation</span>
+                  <span class="about-tag">Care</span>
+                  <span class="about-tag">Trust</span>
+                </div>
+              </div>
+              <div class="about-stat-row">
+                <div class="about-stat-card">
+                  <p class="stat-card__label">Product Range</p>
+                  <p class="stat-card__value">7+</p>
+                  <p class="stat-card__sub">Skincare & hair care solutions</p>
+                </div>
+                <div class="about-stat-card">
+                  <p class="stat-card__label">Expertise</p>
+                  <p class="stat-card__value">10+</p>
+                  <p class="stat-card__sub">Years in dermatology</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- CONTACT -->
+      <section id="contact" class="section contact">
+        <div class="container">
+          <div class="section__head reveal">
+            <div class="section__tag">Get in Touch</div>
+            <h2 class="section__title">Contact <em>Us</em></h2>
+            <p class="section__sub">
+              Have questions about our products? We're here to help.
+            </p>
+          </div>
+          <div class="contact__grid">
+            <a
+              href="mailto:info@carelinkpharma.com"
+              class="ccard reveal"
+              aria-label="Email us"
+            >
+              <div class="ccard__icon" aria-hidden="true">
+                <svg
+                  width="20"
+                  height="20"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                >
+                  <path
+                    d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"
+                  />
+                  <polyline points="22,6 12,13 2,6" />
+                </svg>
+              </div>
+              <div>
+                <p class="ccard__label">Email Us</p>
+                <p class="ccard__value">info@carelinkpharma.com</p>
+              </div>
+            </a>
+            <a
+              href="tel:+917767043001"
+              class="ccard reveal"
+              aria-label="Call us"
+            >
+              <div class="ccard__icon" aria-hidden="true">
+                <svg
+                  width="20"
+                  height="20"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                >
+                  <path
+                    d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12 19.79 19.79 0 0 1 1.65 3.4 2 2 0 0 1 3.62 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8 9.91a16 16 0 0 0 6 6l.86-.87a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"
+                  />
+                </svg>
+              </div>
+              <div>
+                <p class="ccard__label">Call Us</p>
+                <p class="ccard__value">+91 77670 43001</p>
+              </div>
+            </a>
+            <a
+              href="tel:+917588846189"
+              class="ccard reveal"
+              aria-label="Alternate number"
+            >
+              <div class="ccard__icon" aria-hidden="true">
+                <svg
+                  width="20"
+                  height="20"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                >
+                  <path
+                    d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12 19.79 19.79 0 0 1 1.65 3.4 2 2 0 0 1 3.62 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8 9.91a16 16 0 0 0 6 6l.86-.87a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"
+                  />
+                </svg>
+              </div>
+              <div>
+                <p class="ccard__label">Alternate</p>
+                <p class="ccard__value">+91 75888 46189</p>
+              </div>
+            </a>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="footer" role="contentinfo">
+      <div class="footer__inner">
+        <div class="footer__brand">
+          <a
+            class="footer__logo"
+            href="#home"
+            onclick="
+              navTo('home');
+              return false;
+            "
+            >Care<strong>Link</strong> Pharma</a
+          >
+          <p class="footer__tagline">
+            Transforming lives through innovative dermatological solutions.
+          </p>
+          <div class="footer__social" aria-label="Social media links">
+            <a href="#!" aria-label="Twitter"
+              ><svg
+                width="15"
+                height="15"
+                viewBox="0 0 24 24"
+                fill="currentColor"
+              >
+                <path
+                  d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-4.714-6.231-5.401 6.231H2.744l7.73-8.835L1.254 2.25H8.08l4.259 5.631 5.905-5.631zm-1.161 17.52h1.833L7.084 4.126H5.117z"
+                /></svg
+            ></a>
+            <a href="#!" aria-label="Facebook"
+              ><svg
+                width="15"
+                height="15"
+                viewBox="0 0 24 24"
+                fill="currentColor"
+              >
+                <path
+                  d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"
+                /></svg
+            ></a>
+            <a href="#!" aria-label="Instagram"
+              ><svg
+                width="15"
+                height="15"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+              >
+                <rect x="2" y="2" width="20" height="20" rx="5" ry="5" />
+                <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z" />
+                <line x1="17.5" y1="6.5" x2="17.51" y2="6.5" /></svg
+            ></a>
+            <a href="mailto:info@carelinkpharma.com" aria-label="Email"
+              ><svg
+                width="15"
+                height="15"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+              >
+                <path
+                  d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"
+                />
+                <polyline points="22,6 12,13 2,6" /></svg
+            ></a>
+          </div>
+        </div>
+        <nav class="footer__nav" aria-label="Footer navigation">
+          <p class="footer__col-title">Quick Links</p>
+          <a
+            href="#home"
+            onclick="
+              navTo('home');
+              return false;
+            "
+            >Home</a
+          >
+          <a
+            href="#mission"
+            onclick="
+              navTo('mission');
+              return false;
+            "
+            >Mission</a
+          >
+          <a
+            href="#products"
+            onclick="
+              navTo('products');
+              return false;
+            "
+            >Products</a
+          >
+          <a
+            href="#team"
+            onclick="
+              navTo('team');
+              return false;
+            "
+            >Team</a
+          >
+          <a
+            href="#about"
+            onclick="
+              navTo('about');
+              return false;
+            "
+            >About</a
+          >
+          <a
+            href="#contact"
+            onclick="
+              navTo('contact');
+              return false;
+            "
+            >Contact</a
+          >
+        </nav>
+        <address class="footer__contact" aria-label="Contact information">
+          <p class="footer__col-title">Contact</p>
+          <p>
+            <svg
+              width="13"
+              height="13"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+            >
+              <path
+                d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"
+              />
+              <polyline points="22,6 12,13 2,6" />
+            </svg>
+            <a href="mailto:info@carelinkpharma.com">info@carelinkpharma.com</a>
+          </p>
+          <p>
+            <svg
+              width="13"
+              height="13"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+            >
+              <path
+                d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12 19.79 19.79 0 0 1 1.65 3.4 2 2 0 0 1 3.62 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8 9.91a16 16 0 0 0 6 6l.86-.87a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"
+              />
+            </svg>
+            +91 77670 43001
+          </p>
+          <p>
+            <svg
+              width="13"
+              height="13"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+            >
+              <path
+                d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12 19.79 19.79 0 0 1 1.65 3.4 2 2 0 0 1 3.62 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8 9.91a16 16 0 0 0 6 6l.86-.87a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"
+              />
+            </svg>
+            +91 75888 46189
+          </p>
+        </address>
+      </div>
+      <div class="footer__bottom">
+        <p>
+          &copy; <span id="year"></span> CareLink Pharma. All rights reserved.
+        </p>
+      </div>
+    </footer>
+
+    <!-- MODAL -->
+    <div
+      class="modal-overlay"
+      id="modalOverlay"
+      role="dialog"
+      aria-modal="true"
+      aria-labelledby="modalTitle"
+      hidden
+    >
+      <div class="modal" id="modal">
+        <button
+          class="modal__close"
+          id="modalClose"
+          aria-label="Close product details"
+        >
+          <svg
+            width="16"
+            height="16"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2.5"
+          >
+            <line x1="18" y1="6" x2="6" y2="18" />
+            <line x1="6" y1="6" x2="18" y2="18" />
+          </svg>
+        </button>
+        <div class="modal__body">
+          <div class="modal__img-side">
+            <img id="modalImg" src="" alt="" />
+            <span
+              class="pcard__tag"
+              id="modalTag"
+              style="position: static; margin-top: 12px"
+            ></span>
+          </div>
+          <div class="modal__info">
+            <h2 class="modal__title" id="modalTitle"></h2>
+            <div class="modal__content" id="modalContent"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- SCROLL TOP -->
+    <button class="scroll-top" id="scrollTop" aria-label="Scroll to top" hidden>
+      <svg
+        width="18"
+        height="18"
+        viewBox="0 0 24 24"
+        fill="none"
+        stroke="currentColor"
+        stroke-width="2.5"
+      >
+        <path d="M18 15l-6-6-6 6" />
+      </svg>
+    </button>
+
+    <script>
+      "use strict";
+
+      /* ─── PRODUCT DATA ──────────────────────────────── */
+      const productTags = {
+        1: "Moisturizer",
+        2: "Hair Care",
+        3: "Sun Protection",
+        4: "Face Wash",
+        5: "Hair Growth",
+        6: "Supplement",
+        7: "Serum",
+      };
+
+      const productData = [
+        {
+          id: 1,
+          title: "Emocare Lotion",
+          img: "assets/images/Emocare.jpg",
+          desc: "Moisturizing lotion for all skin types. A combination of Shea butter and glycerin that offers several benefits for your skin.",
+          detail: `<p>Emocare Lotion, with its combination of Shea butter and glycerin, offers several benefits for your skin. Shea butter is known for its moisturizing properties, helping to lock in hydration, soothe dryness and create a protective barrier. Glycerin is a humectant that draws moisture from the air to your skin, keeping it hydrated and preventing water loss.</p><p>Together, these ingredients can promote smoother, softer and more supple skin, while also helping to alleviate irritation and maintain skin's natural moisture balance.</p><p>• Enriched with shea butter and Glycerine<br>• Suitable for all skin types<br>• Prevents dryness<br>• Slows the signs of ageing</p>`,
+        },
+        {
+          id: 2,
+          title: "Kerafly Shampoo",
+          img: "assets/images/kerafly.jpg",
+          desc: "Enriched with Anagain and caffeine and being sulfate-free, offers several benefits for your hair.",
+          detail: `<p>Kerafly shampoo, enriched with Anagain and caffeine and being sulfate-free, offers several benefits for your hair. Anagain is derived from organic pea sprouts and is believed to promote hair growth by extending the hair growth phase and revitalizing hair follicles. Caffeine, known for its stimulating properties, can also contribute to hair growth and help improve hair texture.</p><p>The sulfate-free formula is gentle on the scalp and hair, preventing excessive drying and maintaining the natural oils that keep your hair healthy and shiny.</p><p>• Kerafly shampoo — Repairs, Protects, Nourishes<br>• GMO free<br>• Conditions scalp and hair<br>• No artificial colors<br>• SLS/SLES Free gentle cleansing<br>• Paraben free</p>`,
+        },
+        {
+          id: 3,
+          title: "Rediban",
+          img: "assets/images/rediiban.jpg",
+          desc: "Hybrid formula combining non-greasy gel base with a non-comedogenic and oil-free formulation. SPF 30 for all skin types.",
+          detail: `<p>Rediban sunscreen offers a unique hybrid formula that combines non-greasy gel base with a non-comedogenic and oil-free formulation. Its SPF 30 provides effective sun protection for all skin types. Using Rediban sunscreen can help prevent sunburn, premature aging and potential damage caused by both UV and blue light exposure.</p><p>• For all skin types<br>• Broad spectrum<br>• Blue light protection<br>• Non comedogenic</p>`,
+        },
+        {
+          id: 4,
+          title: "Renew-Me S",
+          img: "assets/images/renewme.png",
+          desc: "A skin-rejuvenating face wash used to manage acne. Contains aloe vera, glycolic acid and salicylic acid.",
+          detail: `<p>Renew-Me S Face Wash is a skin-rejuvenating face wash used to manage acne or as an adjuvant in acne management. It contains aloe vera, glycolic acid and salicylic acid as active ingredients which show healing, moisturizing, anti-inflammatory and antiseptic effects.</p><p>It helps cleanse the skin and unclog pores. It is non-comedogenic and suited for oily, acne-prone skin. Regular use helps to improve overall skin tone and texture.</p><p>• Rejuvenates Skin<br>• Reduces The Number Of Wrinkles<br>• Improves Texture And Tone Of Skin<br>• Unblocking And Cleansing Of Pores</p>`,
+        },
+        {
+          id: 5,
+          title: "Minocare F",
+          img: "assets/images/minocare.jpg",
+          desc: "Hair growth solution containing minoxidil 5% and finasteride 0.1%, alcohol-free. Promotes hair growth and reduces hair loss.",
+          detail: `<p>Minocare F offers a hair growth solution containing minoxidil 5% and finasteride 0.1%, along with being alcohol-free. The benefits of using Minocare F include promoting hair growth, reducing hair loss, and potentially improving the thickness and density of hair.</p><p>Minoxidil is known to stimulate hair follicles, while finasteride can help block the hormone responsible for hair loss. When applied topically, minoxidil promotes blood flow to hair follicles, providing sufficient nutrition and oxygen to the hair cell. Finasteride reduces DHT, preventing thinning of hair follicles.</p><p>• Stimulates hair growth and slows down the process of balding<br>• Promotes hair growth in androgenetic alopecia<br>• No odour<br>• Easy to use<br>• Dropper and spray applicators</p>`,
+        },
+        {
+          id: 6,
+          title: "Kerafly Tablet",
+          img: "assets/images/kerafly_tablet.jpg",
+          desc: "Nutraceutical tablet with vitamins, minerals, botanical extracts, soya isoflavones and melatonin. Reduces hair fall across all hair types.",
+          detail: `<p>Kerafly tablet is a nutraceutical tablet designed for adults, containing a blend of vitamins, minerals, botanical extracts, soya isoflavones, and melatonin. This unique formulation helps in reducing hair fall, nourishes hair and stimulates the hair growth across all hair types.</p><p>• Helps in reducing hair fall<br>• Nourishes the hair follicles<br>• Stimulates hair growth<br>• Suitable for all hair types</p>`,
+        },
+        {
+          id: 7,
+          title: "VC Link",
+          img: "assets/images/VC_link.png",
+          desc: "Vitamin C face serum that promotes skin cell turnover, improving overall texture and smoothness of the skin.",
+          detail: `<p>VC-Link offers several benefits to the skin. Vitamin C is known for its antioxidant properties, which can help protect the skin from damage caused by free radicals.</p><p>1. <b>Brighten the Skin:</b> Vitamin C can help fade pigmentation and dark spots, leading to a more even and radiant complexion.<br>2. <b>Boost Collagen Production:</b> Vitamin C plays a role in collagen synthesis, maintaining skin's firmness and elasticity.<br>3. <b>Reduce Inflammation:</b> Vitamin C has anti-inflammatory properties that can calm irritated skin and reduce redness.<br>4. <b>Enhance Sun Protection:</b> Vitamin C can enhance the effectiveness of your sunscreen.<br>5. <b>Improve Skin Texture:</b> Vitamin C can promote skin cell turnover, improving the overall texture and smoothness of the skin.</p><p><b>REPAIRS & BRIGHTENS — Dermatologically Tested</b></p><p>• Vitamin C — a potent antioxidant stimulates collagen synthesis, brightens & reduces dark spots<br>• Ferulic acid protects the skin from free radical damage<br>• Ginseng extract boosts hydration, brightens and improves skin complexion<br>• Licorice extract visibly improves the appearance of uneven skin tone</p>`,
+        },
+      ];
+
+      /* ─── DOM REFS ──────────────────────────────────── */
+      const navbar = document.getElementById("navbar");
+      const menuToggle = document.getElementById("menuToggle");
+      const navLinks = document.getElementById("navLinks");
+      const productsGrid = document.getElementById("productsGrid");
+      const modalOverlay = document.getElementById("modalOverlay");
+      const modal = document.getElementById("modal");
+      const modalClose = document.getElementById("modalClose");
+      const modalImg = document.getElementById("modalImg");
+      const modalTag = document.getElementById("modalTag");
+      const modalTitle = document.getElementById("modalTitle");
+      const modalContent = document.getElementById("modalContent");
+      const scrollTopBtn = document.getElementById("scrollTop");
+      const yearEl = document.getElementById("year");
+
+      /* ─── FOOTER YEAR ───────────────────────────────── */
+      if (yearEl) yearEl.textContent = new Date().getFullYear();
+
+      /* ─── SMOOTH SCROLL NAV ─────────────────────────── */
+      function navTo(id) {
+        const el = document.getElementById(id);
+        if (!el) return;
+        const top = el.getBoundingClientRect().top + window.scrollY - 80;
+        window.scrollTo({ top, behavior: "smooth" });
+        closeMenu();
+      }
+      window.navTo = navTo;
+
+      /* ─── NAVBAR SCROLL ─────────────────────────────── */
+      function onScroll() {
+        const y = window.scrollY;
+        navbar.classList.toggle("navbar--scrolled", y > 60);
+        if (y > 400) {
+          scrollTopBtn.removeAttribute("hidden");
+        } else {
+          scrollTopBtn.setAttribute("hidden", "");
+        }
+      }
+      window.addEventListener("scroll", onScroll, { passive: true });
+      onScroll();
+
+      /* ─── MOBILE MENU ───────────────────────────────── */
+      function openMenu() {
+        navLinks.classList.add("is-open");
+        menuToggle.classList.add("is-open");
+        menuToggle.setAttribute("aria-expanded", "true");
+        menuToggle.setAttribute("aria-label", "Close menu");
+        document.body.style.overflow = "hidden";
+      }
+      function closeMenu() {
+        navLinks.classList.remove("is-open");
+        menuToggle.classList.remove("is-open");
+        menuToggle.setAttribute("aria-expanded", "false");
+        menuToggle.setAttribute("aria-label", "Open menu");
+        document.body.style.overflow = "";
+      }
+      menuToggle.addEventListener("click", () => {
+        navLinks.classList.contains("is-open") ? closeMenu() : openMenu();
+      });
+      document.addEventListener("click", (e) => {
+        if (
+          navLinks.classList.contains("is-open") &&
+          !navLinks.contains(e.target) &&
+          !menuToggle.contains(e.target)
+        ) {
+          closeMenu();
+        }
+      });
+
+      /* ─── RENDER PRODUCTS ───────────────────────────── */
+      function renderProducts() {
+        productsGrid.innerHTML = productData
+          .map(
+            (p) => `
+    <article class="pcard reveal" tabindex="0" role="button" aria-label="View details for ${p.title}" data-id="${p.id}">
+      <div class="pcard__img-wrap">
+        <img src="${p.img}" alt="${p.title}" loading="lazy" />
+        <span class="pcard__tag">${productTags[p.id]}</span>
+      </div>
+      <div class="pcard__body">
+        <h3 class="pcard__title">${p.title}</h3>
+        <p class="pcard__desc">${p.desc}</p>
+        <span class="pcard__cta">
+          View Details
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+        </span>
+      </div>
+    </article>
+  `,
+          )
+          .join("");
+
+        productsGrid.querySelectorAll(".pcard").forEach((card) => {
+          card.addEventListener("click", () =>
+            openModal(Number(card.dataset.id)),
+          );
+          card.addEventListener("keydown", (e) => {
+            if (e.key === "Enter" || e.key === " ") {
+              e.preventDefault();
+              openModal(Number(card.dataset.id));
+            }
+          });
+        });
+      }
+      renderProducts();
+
+      /* ─── PRODUCT MODAL ─────────────────────────────── */
+      let lastFocused = null;
+
+      function openModal(id) {
+        const product = productData.find((p) => p.id === id);
+        if (!product) return;
+        lastFocused = document.activeElement;
+        modalImg.src = product.img;
+        modalImg.alt = product.title;
+        modalTag.textContent = productTags[product.id];
+        modalTitle.textContent = product.title;
+        modalContent.innerHTML = product.detail;
+        modalOverlay.removeAttribute("hidden");
+        document.body.style.overflow = "hidden";
+        modalClose.focus();
+      }
+      function closeModal() {
+        modalOverlay.setAttribute("hidden", "");
+        document.body.style.overflow = "";
+        if (lastFocused) lastFocused.focus();
+      }
+      modalClose.addEventListener("click", closeModal);
+      modalOverlay.addEventListener("click", (e) => {
+        if (e.target === modalOverlay) closeModal();
+      });
+      document.addEventListener("keydown", (e) => {
+        if (e.key === "Escape" && !modalOverlay.hasAttribute("hidden"))
+          closeModal();
+      });
+      modalOverlay.addEventListener("keydown", (e) => {
+        if (e.key !== "Tab") return;
+        const focusable = modal.querySelectorAll(
+          'button, [href], input, select, textarea, [tabindex]:not([tabindex="-1"])',
+        );
+        const first = focusable[0];
+        const last = focusable[focusable.length - 1];
+        if (e.shiftKey) {
+          if (document.activeElement === first) {
+            e.preventDefault();
+            last.focus();
+          }
+        } else {
+          if (document.activeElement === last) {
+            e.preventDefault();
+            first.focus();
+          }
+        }
+      });
+
+      /* ─── SCROLL TOP ────────────────────────────────── */
+      scrollTopBtn.addEventListener("click", () =>
+        window.scrollTo({ top: 0, behavior: "smooth" }),
+      );
+
+      /* ─── REVEAL ON SCROLL ──────────────────────────── */
+      function setupReveal() {
+        const observer = new IntersectionObserver(
+          (entries) => {
+            entries.forEach((entry) => {
+              if (entry.isIntersecting) {
+                entry.target.classList.add("is-visible");
+                observer.unobserve(entry.target);
+              }
+            });
+          },
+          { threshold: 0.1, rootMargin: "0px 0px -36px 0px" },
+        );
+
+        /* Stagger siblings */
+        document.querySelectorAll(".reveal").forEach((el) => {
+          const siblings = el.parentElement.querySelectorAll(".reveal");
+          const idx = Array.from(siblings).indexOf(el);
+          el.style.transitionDelay = `${idx * 75}ms`;
+          observer.observe(el);
+        });
+      }
+      requestAnimationFrame(setupReveal);
+    </script>
+  </body>
+</html>
